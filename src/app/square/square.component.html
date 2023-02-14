@@ -1,3 +1,13 @@
 <div class="square">      
-    <h1>{{square.name}}</h1>
+    <h1>{{square.name | uppercase }}</h1>
+    <p>{{ square.id }}</p>
 </div>
+
+<p>
+    <img [src]="square.imageSrc" [alt]="square.name" />
+    Hello {{square.name}} !
+  </p>
+  
+  <button (click)="sayHello()">Dire coucou</button>
+
+  <input type="text" [(ngModel)]="square.name">
