@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Square } from '../square';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-square',

@@ -1,0 +1,25 @@
+<h1>Profil Utilisateur</h1>
+
+<div class="card">
+  <img class="img" [src]="user.avatar" [alt]="'Un avatar'" />
+  <div class="card-body">
+    <h5 class="card-name">{{ user.firstname }}{{ user.lastname }}</h5>
+    <q class="card-quote">Citation préférée: {{ user.quote }}</q>
+    <p class="card-age" id="age">{{ user.age }} ans</p>
+    <div class="quote">
+      <label for="quote">Modifier la citation :</label>
+      <input type="text" id="quote" [(ngModel)]="user.quote" />
+    </div>
+    <button (click)="showOrHideAge()">Afficher/masquer l'âge</button>
+  </div>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
