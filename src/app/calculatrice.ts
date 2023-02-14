@@ -1,5 +1,5 @@
 export interface Calculatrice {
-  figure1: number;
-  figure2: number;
-  result: number;
+  figure1: number | undefined;
+  figure2: number | undefined;
+  result: number | undefined;
 }

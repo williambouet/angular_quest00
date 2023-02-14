@@ -1,10 +1,30 @@
-<h1>La calculatrice !</h1>
+
+<div class="calculatrice">
+    <h1>La calculatrice !</h1>
+    <p><small>modèle xp300/mlzefeg24</small></p>
+    <div class="calcul">
+        <div class="figures">
+            <div class="figureAndset">
+                <p class="figure">{{calculatrice.figure1}}</p>
+                <button (click)="setFigure1()">Aléatoire ou tapez :</button>
+                <input type="text" [(ngModel)]="calculatrice.figure1">
+            </div>
+            <div class="figureAndset">
+                <p class="figure">{{calculatrice.figure2}}</p>
+                <button (click)="setFigure2()">Aléatoire ou tapez :</button>
+                <input type="text" [(ngModel)]="calculatrice.figure2">
+            </div>
+        </div>
+        <div class="operations">
+            <button (click)="multiplication()">Multiplication</button>
+            <button (click)="division()">Division</button>
+            <button (click)="soustract()">Soustraction</button>
+            <button (click)="addition()">Addition</button>
+        </div>
+        <p class="result"> = {{calculatrice.result}}</p>
+    </div>
 
 
-<button (click)="setFigure1()">Chiffre 1</button>
-<button (click)="setFigure1()">Chiffre 2</button>
 
-<button (click)="multiplication()">Multiplication</button>
-<button (click)="division()">Division</button>
-<button (click)="soustract()">Soustraction</button>
-<button (click)="addition()">Addition</button>
+
+</div>

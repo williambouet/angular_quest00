@@ -1,0 +1,25 @@
+.figures, .result {
+    display: flex;
+    font-size: 50px;
+    margin:10px;
+}
+
+.figureAndset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+}
+
+.calcul, .calculatrice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.operations, .operations>button {
+    margin:10px;
+}
