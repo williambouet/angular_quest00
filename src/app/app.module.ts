@@ -10,7 +10,7 @@ import { UserProfileComponent } from './UserProfile/UserProfile.component';
 
 @NgModule({
   declarations: [AppComponent, SquareComponent, UserProfileComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NgModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
