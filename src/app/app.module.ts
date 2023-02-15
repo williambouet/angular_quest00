@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SquareComponent } from './square/square.component';
 import { IngredientComponent } from './ingredient/ingredient.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     SquareComponent,
-      IngredientComponent
+      IngredientComponent,
+      ButtonComponent
    ],
   imports: [
     BrowserModule,
