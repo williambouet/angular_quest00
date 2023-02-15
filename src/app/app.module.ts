@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { SquareComponent } from './square/square.component';
 import { IngredientComponent } from './ingredient/ingredient.component';
 import { ButtonComponent } from './button/button.component';
-import { HightLightDirective } from './hightLight.directive';
-import { DisplayGuestsDirective } from './displayGuests.directive';
+import { HightLightDirective } from './directive/hightLight.directive';
+import { DisplayGuestsDirective } from './directive/displayGuests.directive';
 import { MovieComponent } from './movie/movie.component';
+import { ChangeMovieDirective } from './directive/changeMovie.directive';
+import { DisplayMovieDirective } from './directive/displayMovie.directive';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { MovieComponent } from './movie/movie.component';
     ButtonComponent,
     HightLightDirective,
     DisplayGuestsDirective,
-      MovieComponent
+    MovieComponent,
+    ChangeMovieDirective,
+    DisplayMovieDirective
    ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

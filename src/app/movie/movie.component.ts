@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieComponent implements OnInit {
   public title: string = "Liste de films";
+  public showMovies : boolean = true;
   public movies: string[] = [
     'film 1',
     'film 2',
