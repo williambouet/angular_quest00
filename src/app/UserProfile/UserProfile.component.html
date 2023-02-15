@@ -1,11 +1,11 @@
 <h1>Profil Utilisateur</h1>
 
 <div class="card">
-  <img class="img" [src]="user.avatar" [alt]="'Un avatar'" />
+  <img class="img" [src]="user.getAvatar()" [alt]="'Un avatar'" />
   <div class="card-body">
-    <h5 class="card-name">{{ user.firstname }}{{ user.lastname }}</h5>
-    <q class="card-quote">Citation préférée: {{ user.quote }}</q>
-    <p class="card-age" id="age">{{ user.age }} ans</p>
+    <h5 class="card-name">{{ user.getFirstname() }}{{ user.getLastname() }}</h5>
+    <q class="card-quote">Citation préférée: {{ user.getQuote() }}</q>
+    <p class="card-age" id="age">{{ user.getAge() }} ans</p>
     <div class="quote">
       <label for="quote">Modifier la citation :</label>
       <input type="text" id="quote" [(ngModel)]="user.quote" />
