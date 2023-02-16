@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Square } from '../square';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Square } from '../model/square';
 
 @Component({
   selector: 'app-square',
@@ -12,7 +11,6 @@ export class SquareComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   square: Square = {

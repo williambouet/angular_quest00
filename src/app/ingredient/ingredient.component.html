@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row mt-5">
+    <h1 class="my-5">{{ title }}</h1>
+    <div class="col-4">
+      <h2>Liste de course</h2>
+      <ul>
+        <li>Pommes de terre</li>
+        <li
+          [ngStyle]="{
+            backgroundColor: isThisIngredientVital ? 'red' : 'yellow'
+          }"
+        >
+          Raclette
+        </li>
+        <li>Jambon</li>
+        <li [ngClass]="{ vital: isThisIngredientVital }">Cornichons</li>
+        <li>Chou-fleur</li>
+      </ul>
+    </div>
+    <div class="col-4">
+      <h2 appHightLight>Liste des invités</h2>
+      <ul>
+        <li *appDisplayGuests="isGuestListDisplayed">Brenda</li>
+        <li>Dylan</li>
+        <li>Michel Drucker</li>
+        <li>Marc Aurèle</li>
+        <li>Julie</li>
+      </ul>
+    </div>
+    <div class="col-4">
+      <h2>Playlist</h2>
+      <ul>
+        <li *ngFor="let song of songList">
+          {{ song }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
