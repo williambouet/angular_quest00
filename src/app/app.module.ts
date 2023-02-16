@@ -26,9 +26,10 @@ import { DisplayMovieDirective } from './directive/displayMovie.directive';
     DisplayGuestsDirective,
     MovieComponent,
     ChangeMovieDirective,
-    DisplayMovieDirective
+    DisplayMovieDirective, 
+    CardComponent
    ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
