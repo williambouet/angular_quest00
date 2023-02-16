@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Calculatrice } from '../calculatrice';
+import { Calculatrice } from '../model/calculatrice';
 @Component({
   selector: 'app-calculatrice',
   templateUrl: './calculatrice.component.html',
