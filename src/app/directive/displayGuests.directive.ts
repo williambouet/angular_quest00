@@ -6,12 +6,10 @@ import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 export class DisplayGuestsDirective {
 
   @Input() set appDisplayGuests(condition: boolean) {
-    if (condition) {
-      this.vwRef.createEmbeddedView(this.tplRef);
-    } else {
-      this.vwRef.clear();
-    }
-}
+   
+    condition ? this.vwRef.createEmbeddedView(this.tplRef) : this.vwRef.clear();
+
+  }
   constructor(private tplRef: TemplateRef<any>, private vwRef: ViewContainerRef) { }
 
 }

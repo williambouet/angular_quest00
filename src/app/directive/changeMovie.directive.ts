@@ -6,16 +6,19 @@ import {  Directive, Renderer2, ElementRef, OnInit,  HostListener, HostBinding  
 export class ChangeMovieDirective implements OnInit {
   
   constructor(private renderer: Renderer2, private elRef: ElementRef) { }
+  
   @HostBinding('style.backgroundColor') myBackgroundColor!: string;
   
   @HostListener('mouseenter') addClass = (eventData: Event) => {
-    this.elRef.nativeElement.querySelector('li')
-    .classList.add('fs-5');
+    this.elRef.nativeElement
+      .querySelector('li')
+      .classList.add('fs-5', 'text-danger');
   }
 
   @HostListener('mouseleave') removeClass = (eventData: Event) => {
-    this.elRef.nativeElement.querySelector('li')
-    .classList.remove('fs-5');
+    this.elRef.nativeElement
+      .querySelector('li')
+      .classList.remove('fs-5', 'text-danger');
   }
 
   ngOnInit() { }
