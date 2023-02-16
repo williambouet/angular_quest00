@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Square } from '../square';
+import { Square } from '../model/square';
 
 @Component({
   selector: 'app-square',

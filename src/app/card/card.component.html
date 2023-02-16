@@ -1,0 +1,21 @@
+<div class="card" style="width: 18rem">
+  <img src="{{ user.avatar }}" class="card-img-top" alt="une image" />
+  <div class="card-body">
+    <h5 class="card-title text-center mb-0">
+      {{ user.firstname }} {{ user.lastname }}
+    </h5>
+    <p class="card-text text-center text-secondary mt-0 p-0 d-flex flex-column">
+      <small>{{ user.age }} ans </small>
+      <q class="card-text">{{ user.quote }}</q>
+    </p>
+
+    <textarea
+      [(ngModel)]="user.quote"
+      class="form-control"
+      aria-label="With textarea"
+    ></textarea>
+    <button class="btn btn-outline-danger mt-2" (click)="clearCitation()">
+      Effacer
+    </button>
+  </div>
+</div>

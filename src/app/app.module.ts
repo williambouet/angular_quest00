@@ -8,18 +8,33 @@ import { AppComponent } from './app.component';
 import { SquareComponent } from './square/square.component';
 import { CalculatriceComponent } from './calculatrice/calculatrice.component';
 
+import { CardComponent } from './card/card.component';
+import { IngredientComponent } from './ingredient/ingredient.component';
+import { ButtonComponent } from './button/button.component';
+import { HightLightDirective } from './directive/hightLight.directive';
+import { DisplayGuestsDirective } from './directive/displayGuests.directive';
+import { MovieComponent } from './movie/movie.component';
+import { ChangeMovieDirective } from './directive/changeMovie.directive';
+import { DisplayMovieDirective } from './directive/displayMovie.directive';
+
+
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     SquareComponent,
-    CalculatriceComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+    CalculatriceComponent,
+    IngredientComponent,
+    ButtonComponent,
+    HightLightDirective,
+    DisplayGuestsDirective,
+    MovieComponent,
+    ChangeMovieDirective,
+    DisplayMovieDirective, 
+    CardComponent
+   ],
+  imports: [BrowserModule, AppRoutingModule,
+    FormsModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
