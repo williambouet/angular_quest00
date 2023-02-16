@@ -9,7 +9,7 @@ import { ROUTES } from './app-routes';
 
 import { AppComponent } from './app.component';
 import { SquareComponent } from './square/square.component';
-import { UserProfileComponent } from './UserProfile/UserProfile.component';
+
 
 import { CalculatriceComponent } from './calculatrice/calculatrice.component';
 import { CardComponent } from './card/card.component';
@@ -26,7 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SquareComponent,
+
     CalculatriceComponent,
     IngredientComponent,
     ButtonComponent,
@@ -36,7 +36,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     ChangeMovieDirective,
     DisplayMovieDirective,
     CardComponent,
-    UserProfileComponent,
       NavbarComponent
    ],
   imports: [
