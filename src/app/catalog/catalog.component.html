@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <h2>Liste avec promo</h2>
+      <div *ngFor="let product of products">
+        <ul *ngIf="product.promo">
+          <li>id : {{ product.id }}</li>
+          <li>name : {{ product.name }}</li>
+          <li>price : {{ product.price }}€</li>
+          <li>promo : {{ product.promo }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <h2>Liste sans prix</h2>
+      <div *ngFor="let product of products">
+      <ul *ngIf="product.price === null">
+        <li>id : {{ product.id }}</li>
+        <li>name : {{ product.name }}</li>
+        <li>price : {{ product.price }}€</li>
+        <li>promo : {{ product.promo }}</li>
+      </ul>
+  </div>
+</div>
+
+    <div class="col-4">
+      <h2>Liste des restants</h2>
+      <div *ngFor="let product of products">
+      <ul *ngIf="product.price != undefined && !product.promo">
+        <li>id : {{ product.id }}</li>
+        <li>name : {{ product.name }}</li>
+        <li>price : {{ product.price }}€</li>
+        <li>promo : {{ product.promo }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>

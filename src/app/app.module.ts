@@ -20,9 +20,12 @@ import { DisplayGuestsDirective } from './directive/displayGuests.directive';
 import { ChangeMovieDirective } from './directive/changeMovie.directive';
 import { DisplayMovieDirective } from './directive/displayMovie.directive';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CatalogComponent } from './catalog/catalog.component';
+import { DisplayPromoDirective } from './directive/displayPromo.directive';
+import { DisplayPriceDirective } from './directive/displayPrice.directive';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -33,9 +36,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     MovieComponent,
     ChangeMovieDirective,
     DisplayMovieDirective,
+    DisplayPromoDirective,
+    DisplayPriceDirective,
     CardComponent,
     NavbarComponent,
-  ],
+      CatalogComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
