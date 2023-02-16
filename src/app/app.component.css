@@ -4,10 +4,9 @@
     justify-content: space-between;
 }
 
-.fourSquares{
-    height: calc(100vh - 100px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;    
-}
-
+  .fourSquares {
+      height: calc(100vh - 100px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }

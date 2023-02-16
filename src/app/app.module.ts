@@ -9,6 +9,8 @@ import { ROUTES } from './app-routes';
 
 import { AppComponent } from './app.component';
 import { SquareComponent } from './square/square.component';
+import { UserProfileComponent } from './UserProfile/UserProfile.component';
+
 import { CalculatriceComponent } from './calculatrice/calculatrice.component';
 import { CardComponent } from './card/card.component';
 import { IngredientComponent } from './ingredient/ingredient.component';
@@ -34,14 +36,15 @@ import { NavbarComponent } from './navbar/navbar.component';
     ChangeMovieDirective,
     DisplayMovieDirective,
     CardComponent,
-    NavbarComponent,
-  ],
+    UserProfileComponent,
+      NavbarComponent
+   ],
   imports: [
-    BrowserModule,
+    BrowserModule, 
     AppRoutingModule,
-    FormsModule,
-    FormsModule,
+    FormsModule, 
     RouterModule.forRoot(ROUTES),
+    NavbarComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
