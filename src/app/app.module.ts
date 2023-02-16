@@ -11,28 +11,17 @@ import { IngredientComponent } from './ingredient/ingredient.component';
 import { ButtonComponent } from './button/button.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     SquareComponent,
-   
-
-
-
-@NgModule({
-  declarations: [		
     AppComponent,
     SquareComponent,
-      IngredientComponent,
-      ButtonComponent,
-         CardComponent
-
-   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    IngredientComponent,
+    ButtonComponent,
+    CardComponent,
   ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
