@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class IngredientComponent implements OnInit {
 
   title: string = "Raclette party !";
-  isThisIngredientVital: boolean = true;
+  isThisIngredientVital: boolean = false;
   isGuestListDisplayed: boolean = true;
   songList: string[] = ["Alejandro", "Ne me quitte pas", "Le temps est bon"];
 

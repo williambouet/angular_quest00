@@ -1,4 +1,4 @@
-import {  Directive, Renderer2,ElementRef, OnInit,  HostListener, HostBinding  } from '@angular/core';
+import {  Directive, Renderer2, ElementRef, OnInit,  HostListener, HostBinding  } from '@angular/core';
 
 @Directive({
   selector: '[appChangeMovie]'
@@ -17,8 +17,6 @@ export class ChangeMovieDirective implements OnInit {
     this.elRef.nativeElement.querySelector('li')
     .classList.remove('fs-5');
   }
-
-
 
   ngOnInit() { }
 
