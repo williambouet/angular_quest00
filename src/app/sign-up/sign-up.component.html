@@ -1,0 +1,176 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-sm-6">
+      <h2 class="mt-2">Formulaire d'inscription</h2>
+
+      <form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit()">
+        <div class="mb-3">
+          <label for="inputFirstname" class="form-label"
+            >Prénom
+            <ng-container *ngIf="firstname.errors && signUpForm.submitted">
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="firstname.errors['required']"
+                  >Le prénom est requis</small
+                ></span
+              >
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="firstname.errors['maxlength']"
+                  >La longueur maximale est de 255 caractères</small
+                ></span
+              >
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="firstname.errors['minlength']"
+                  >La longueur minimale est de 3 caractères</small
+                ></span
+              >
+            </ng-container>
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputFirstname"
+            required
+            [(ngModel)]="model.firstname"
+            maxlength="255"
+            minlength="3"
+            name="firstname"
+            #firstname="ngModel"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="inputLastname" class="form-label"
+            >Nom
+            <ng-container *ngIf="lastname.errors && signUpForm.submitted">
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="lastname.errors['required']"
+                  >Le nom est requis</small
+                ></span
+              ><span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="lastname.errors['maxlength']"
+                  >La longueur maximale est de 255 caractères</small
+                ></span
+              >
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="lastname.errors['minlength']"
+                  >La longueur minimale est de 3 caractères</small
+                ></span
+              >
+            </ng-container>
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputLastname"
+            required
+            [(ngModel)]="model.lastname"
+            maxlength="255"
+            minlength="3"
+            name="lastname"
+            #lastname="ngModel"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label"
+            >Adresse email de connexion
+            <ng-container *ngIf="email.errors && signUpForm.submitted">
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="email.errors['required']"
+                  >L'email est requis</small
+                ></span
+              >
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="email.errors['maxlength']"
+                  >La longueur maximale est de 255 caractères</small
+                ></span
+              >
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="email.errors['pattern']"
+                  >L'email n'est pas conforme</small
+                ></span
+              >
+            </ng-container>
+          </label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            aria-describedby="emailHelp"
+            required
+            [(ngModel)]="model.email"
+            maxlength="255"
+            name="email"
+            #email="ngModel"
+            [pattern]="pattern"
+          />
+          <div id="emailHelp" class="form-text">
+            Nous ne partagerons pas cette information.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="inputPassword" class="form-label"
+            >Mot de passe
+            <ng-container *ngIf="password.errors && signUpForm.submitted">
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="password.errors['required']"
+                  >L'email est requis</small
+                ></span
+              >
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="password.errors['maxlength']"
+                  >La longueur maximale est de 255 caractères</small
+                ></span
+              >
+              <span class="m-1 p-0"
+                ><small
+                  class="fs-small text-danger"
+                  *ngIf="password.errors['minlength']"
+                  >La longueur minimale est de 8 caractères</small
+                ></span
+              >
+            </ng-container>
+          </label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            required
+            [(ngModel)]="model.password"
+            maxlength="255"
+            minlength="8"
+            name="password"
+            #password="ngModel"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          <i class="bi bi-send pe-2"></i>S'inscrire
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

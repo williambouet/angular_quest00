@@ -23,6 +23,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DisplayPromoDirective } from './directive/displayPromo.directive';
 import { DisplayPriceDirective } from './directive/displayPrice.directive';
+import { HeroFormComponent } from './hero-form/hero-form.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [	
@@ -40,12 +42,13 @@ import { DisplayPriceDirective } from './directive/displayPrice.directive';
     DisplayPriceDirective,
     CardComponent,
     NavbarComponent,
-      CatalogComponent
+    CatalogComponent,
+    HeroFormComponent,
+      SignUpComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     FormsModule,
     RouterModule.forRoot(ROUTES),
   ],
