@@ -23,9 +23,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DisplayPromoDirective } from './directive/displayPromo.directive';
 import { DisplayPriceDirective } from './directive/displayPrice.directive';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -40,12 +41,12 @@ import { DisplayPriceDirective } from './directive/displayPrice.directive';
     DisplayPriceDirective,
     CardComponent,
     NavbarComponent,
-      CatalogComponent
-   ],
+    CatalogComponent,
+    HeroFormComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     FormsModule,
     RouterModule.forRoot(ROUTES),
   ],

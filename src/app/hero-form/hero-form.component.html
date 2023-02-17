@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-sm-6">
+      <h2>Hero Corp</h2>
+      
+      <form #heroForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="inputHero" class="form-label">Nom du héro</label>
+          <input type="text" class="form-control" id="inputHero" aria-describedby="heroHelp" required [(ngModel)]="model.name" name="name">
+          <div id="heroHelp" class="form-text">Entrez le nom d'un héro</div>
+        </div>
+        
+        <div class="mb-3">
+          <select class="form-select" aria-label="Default select example" required [(ngModel)]="model.power" name="power" >
+            <option selected>Liste des pouvoirs</option>
+            <option *ngFor="let power of powers" [value]="power">{{power}}</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="inputAlterHero" class="form-label">Nom de l'alter-héro</label>
+          <input type="text" class="form-control" id="inputAlterHero" aria-describedby="alterHeroHelp" [(ngModel)]="model.alterHero" name="alterHero" >
+          <div id="alterHeroHelp" class="form-text">Entrez le nom d'un alter-héro</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+    </div>
+  </div>
+</div>
