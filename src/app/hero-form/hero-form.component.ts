@@ -15,7 +15,7 @@ export class HeroFormComponent implements OnInit {
     'Être tout le temps malade',
   ];
 
-  model: Hero = new Hero(1, "StrabismVarius", this.powers[3]);
+  model: Hero = new Hero(1, "StrabismVarius", this.powers[-1]);
   submitted = false;
   
   constructor() { }
@@ -26,7 +26,7 @@ export class HeroFormComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    alert("formulaire validé : " + this.model  )
+    alert("formulaire validé : " + this.model.power);
   }
 
 }

@@ -2,31 +2,76 @@
   <div class="row d-flex justify-content-center">
     <div class="col-12 col-sm-6">
       <h2>Hero Corp</h2>
-      
-      <form #heroForm="ngForm" (ngSubmit)="onSubmit()">
-        <div class="mb-3">
-          <label for="inputHero" class="form-label">Nom du héro</label>
-          <input type="text" class="form-control" id="inputHero" aria-describedby="heroHelp" required [(ngModel)]="model.name" name="name">
-          <div id="heroHelp" class="form-text">Entrez le nom d'un héro</div>
-        </div>
+
+      <form #heroForm="ngForm" (ngSubmit)="heroForm.valid && onSubmit()">
+        
         
         <div class="mb-3">
-          <select class="form-select" aria-label="Default select example" required [(ngModel)]="model.power" name="power" >
-            <option selected>Liste des pouvoirs</option>
-            <option *ngFor="let power of powers" [value]="power">{{power}}</option>
+          <label for="inputHero" class="form-label">Nom du héro
+            <ng-container *ngIf="name.errors && heroForm.submitted">
+              <span class=" m-1 p-0"><small class="fs-small text-danger" *ngIf="name.errors['required']">Le titre est requis</small></span>
+              <span class=" m-1 p-0"><small class="fs-small text-danger" *ngIf="name.errors['minlength']">La longueur minimale doit être supérieure à 5</small></span>
+              <span class=" m-1 p-0"><small class="fs-small text-danger" *ngIf="name.errors['maxlength']">La longueur maximale doit être inférieure à 30</small></span>
+            </ng-container>
+          </label>
+          <input type="text" class="form-control" id="inputHero" aria-describedby="heroHelp" required
+          [(ngModel)]="model.name"
+            #name="ngModel"
+            name="name"
+            required
+            minlength="5" 
+            maxlength="30"
+            />
+            <div id="heroHelp" class="form-text">Entrez le nom d'un héro</div>
+         </div>
+
+        <div class="mb-3">
+          <label for="power" class="form-label"
+          >Pouvoir du héro
+          <ng-container *ngIf="power.errors && heroForm.submitted">
+            <span class=" m-1 p-0"><small class="fs-small text-danger" *ngIf="power.errors['required']">Un pouvoir doit être assigné au héro</small></span>
+          </ng-container>
+        </label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            required
+            [(ngModel)]="model.power"
+            name="power"
+            #power="ngModel"
+          >
+          <option selected disabled value="">Choisir un pouvoir...</option>
+            <option *ngFor="let power of powers" [value]="power">
+              {{ power }}
+            </option>
           </select>
         </div>
 
         <div class="mb-3">
-          <label for="inputAlterHero" class="form-label">Nom de l'alter-héro</label>
-          <input type="text" class="form-control" id="inputAlterHero" aria-describedby="alterHeroHelp" [(ngModel)]="model.alterHero" name="alterHero" >
-          <div id="alterHeroHelp" class="form-text">Entrez le nom d'un alter-héro</div>
+          <label for="inputAlterHero" class="form-label"
+            >Nom de l'alter-héro
+            <ng-container *ngIf="alterHero.errors && heroForm.submitted">
+              <span class=" m-1 p-0"><small class="fs-small text-danger" *ngIf="alterHero.errors['maxlength']">La longueur maximale doit être inférieure à 30</small></span>
+            </ng-container>
+            </label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="inputAlterHero"
+            aria-describedby="alterHeroHelp"
+            [(ngModel)]="model.alterHero"
+            name="alterHero"
+            #alterHero="ngModel"
+            maxlength="30"
+          />
+          <div id="alterHeroHelp" class="form-text">
+            Entrez le nom d'un alter-héro
+          </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-send pe-2"></i>Envoyer</button>
       </form>
-
-
     </div>
   </div>
 </div>
