@@ -24,9 +24,10 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { DisplayPromoDirective } from './directive/displayPromo.directive';
 import { DisplayPriceDirective } from './directive/displayPrice.directive';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -43,7 +44,8 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
     NavbarComponent,
     CatalogComponent,
     HeroFormComponent,
-  ],
+      SignUpComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

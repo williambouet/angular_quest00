@@ -7,6 +7,7 @@ import { SquareComponent } from './square/square.component';
 import { ButtonComponent } from './button/button.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const ROUTES: Routes = [
     { path: 'fiche', component: CardComponent },
@@ -18,6 +19,7 @@ const ROUTES: Routes = [
     { path: 'boutons', component: ButtonComponent },
     { path: 'catalogue', component: CatalogComponent },
     { path: 'héros', component: HeroFormComponent },
+    { path: 'inscription', component: SignUpComponent },
     
 ];
 
