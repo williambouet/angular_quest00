@@ -26,9 +26,10 @@ import { DisplayPriceDirective } from './directive/displayPrice.directive';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { SearchMovieComponent } from './search-movie/search-movie.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -46,7 +47,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     CatalogComponent,
     HeroFormComponent,
       SignUpComponent,
-      ReactiveFormComponent
+      ReactiveFormComponent,
+      SearchMovieComponent
    ],
   imports: [
     BrowserModule,
