@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-sm-6">
+      <h2 class="mt-2">Formulaire de recherche de film</h2>
+
+      <form (ngSubmit)="searchForm.valid && onSubmit()" [formGroup]="searchForm" #movieForm="ngForm">
+
+        <!-- ERRORS -->
+        <ul class="list-group mb-3">
+          <ng-container *ngIf="movieForm.submitted">
+            <li class="list-group-item list-group-item-success">
+              Formulaire soumit : {{ movieForm.submitted }}
+            </li>
+          </ng-container>
+          <ng-container *ngIf="!movieForm.submitted">
+            <li class="list-group-item list-group-item-danger">
+              Formulaire soumit : {{ movieForm.submitted }}
+            </li>
+          </ng-container>
+
+          <ng-container *ngIf="searchForm.valid">
+            <li class="list-group-item list-group-item-success">
+              Formulaire valide : {{ movieForm.valid }}
+            </li>
+          </ng-container>
+          <ng-container *ngIf="!searchForm.valid">
+            <li class="list-group-item list-group-item-danger">
+              Formulaire valide : {{ movieForm.valid }}
+            </li>
+          </ng-container>
+        </ul>
+
+        <!-- ID -->
+        <div class="mb-3">
+          <label for="inputId" class="form-label">Identifiant </label>
+          <input type="text" class="form-control" id="inputId" name="id" formControlName="id" />
+        </div>
+
+        <!-- TITLE -->
+        <div class="mb-3">
+          <label for="inputTitle" class="form-label">Titre
+            <ng-container *ngIf="searchForm.controls.title.errors && movieForm.submitted">
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="searchForm.controls.title.errors?.['required']">Le titre est requis</small></span>
+            </ng-container>
+          </label>
+          <input type="text" class="form-control" id="inputTitle" name="title"
+            formControlName="title" />
+        </div>
+
+        <!-- TYPE -->
+        <div class="mb-3">
+          <label for="inputType" class="form-label">Genre </label>
+          <select class="form-select" name="type" formControlName="type">
+            <option selected disabled value="">Choisir un genre...</option>
+            <option *ngFor="let type of types" [value]="type">
+              {{ type }}
+            </option>
+          </select>
+        </div>
+
+        <!-- YEAR -->
+        <div class="mb-3">
+          <label for="inputYear" class="form-label">Année de sortie
+            <ng-container *ngIf="searchForm.controls.year.errors && movieForm.submitted">
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="searchForm.controls.year.errors['required']">L'année est requis</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="searchForm.controls.year.errors['max']">L'année ne peut être supérieure à celle
+                  actuelle</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="searchForm.controls.year.errors['min']">L'année ne peut être inférieure à {{lowYear}}</small></span>
+            </ng-container>
+          </label>
+          <input type="number" class="form-control" id="inputYear" name="year" formControlName="year" />
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="mb-3">
+          <label for="inputDescriptions" class="form-label">Descriptions</label>
+          <select class="form-select" name="descriptions" formControlName="descriptions">
+            <option selected disabled value="">Choisir un type...</option>
+            <option *ngFor="let description of descriptions" [value]="description">
+              {{ description }}
+            </option>
+          </select>
+        </div>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-search me-2"></i>Recherche
+          </button>
+      </form>
+    </div>
+  </div>
+</div>
