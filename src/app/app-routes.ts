@@ -8,6 +8,7 @@ import { ButtonComponent } from './button/button.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const ROUTES: Routes = [
     { path: 'fiche', component: CardComponent },
@@ -20,6 +21,7 @@ const ROUTES: Routes = [
     { path: 'catalogue', component: CatalogComponent },
     { path: 'héros', component: HeroFormComponent },
     { path: 'inscription', component: SignUpComponent },
+    { path: 'formulaire-réactif', component: ReactiveFormComponent},
     
 ];
 

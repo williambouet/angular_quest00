@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 
@@ -25,9 +25,10 @@ import { DisplayPromoDirective } from './directive/displayPromo.directive';
 import { DisplayPriceDirective } from './directive/displayPrice.directive';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -44,12 +45,14 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     NavbarComponent,
     CatalogComponent,
     HeroFormComponent,
-      SignUpComponent
+      SignUpComponent,
+      ReactiveFormComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES),
   ],
   providers: [],
