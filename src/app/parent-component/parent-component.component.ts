@@ -12,16 +12,19 @@ export class ParentComponentComponent implements OnInit {
   public sugarQuantity!: number;
   public eggQuantity!: number;
   public cook: boolean = false; 
-
+  public cookiesCooked!: number;
   
   constructor(
   ) { }
 
   startCooking() {
     this.cook = true;
-    alert('ça cuit ! ' + this.sugarQuantity)
   }
 
+  onGetCookies(event: number): void {
+    this.cookiesCooked =+ event;
+
+  }
   ngOnInit() {
   }
 

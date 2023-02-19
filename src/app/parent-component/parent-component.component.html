@@ -6,15 +6,18 @@
         <app-child-component
         [message]="'Message en provenance du parent'" ></app-child-component>
       -->
+      <app-child-component
+      (cookies)="onGetCookies($event)"
+      [startCooking]="cook" 
+      [numberOfCookies]="numberOfCookies"
+      [flour]="flourQuantity" 
+      [salt]="saltQuantity" 
+      [sugar]="sugarQuantity"
+      [egg]="eggQuantity">
+      ></app-child-component>
+
+      
       <form (ngSubmit)="startCooking()">
-        <app-child-component
-        [startCooking]="cook" 
-        [numberOfCookies]="8"
-        [flour]="flourQuantity" 
-        [salt]="saltQuantity" 
-        [sugar]="sugarQuantity"
-        [egg]="eggQuantity">
-        ></app-child-component>
         
         <h2>Côté parent</h2>
         
@@ -42,6 +45,7 @@
 
         <div>
           <button class="btn btn-primary" type="submit">Cuisiner 🍪</button>
+          <small  class="form-label ms-5">Nombre de cookies cuit : {{ cookiesCooked }}</small>
         </div>
 
       </form>
@@ -49,6 +53,6 @@
 
 
 
-    </div>
+    </div>        
   </div>
 </div>
