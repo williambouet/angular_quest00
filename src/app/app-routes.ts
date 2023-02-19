@@ -10,6 +10,8 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
+import { ParentComponentComponent } from './parent-component/parent-component.component';
+import { DevelopperComponent } from './developper/developper.component';
 
 const ROUTES: Routes = [
     { path: 'fiche', component: CardComponent },
@@ -23,7 +25,9 @@ const ROUTES: Routes = [
     { path: 'héros', component: HeroFormComponent },
     { path: 'inscription', component: SignUpComponent },
     { path: 'formulaire-réactif', component: ReactiveFormComponent },
-    { path: 'recherche-film', component: SearchMovieComponent}
+    { path: 'recherche-film', component: SearchMovieComponent },
+    { path: 'parent', component: ParentComponentComponent},
+    { path: 'développeur', component: DevelopperComponent},    
     
 ];
 
