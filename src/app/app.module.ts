@@ -27,9 +27,13 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
+import { ChildComponentComponent } from './child-component/child-component.component';
+import { ParentComponentComponent } from './parent-component/parent-component.component';
+import { DevelopperComponent } from './developper/developper.component';
+import { SkillComponent } from './skill/skill.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [							
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -48,7 +52,11 @@ import { SearchMovieComponent } from './search-movie/search-movie.component';
     HeroFormComponent,
       SignUpComponent,
       ReactiveFormComponent,
-      SearchMovieComponent
+      SearchMovieComponent,
+      ChildComponentComponent,
+      ParentComponentComponent,
+      DevelopperComponent,
+      SkillComponent
    ],
   imports: [
     BrowserModule,

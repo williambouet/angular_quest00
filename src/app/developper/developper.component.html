@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-6">
+      <h1>Développeur</h1>
+
+      <!-- DEVELOPPER PART -->
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ developper.firstName }} {{ developper.lastName }} <small
+              class="text-secondary fw-small">{{ developper.age }} ans </small></h5>
+          <p class="card-text">{{ developper.gender }}</p>
+          <p class="card-text">{{ developper.bio }}</p>
+
+          <!-- SKILLS PART -->
+          <h5 class="card-title">Skills</h5>
+          <ng-container *ngFor="let skill of developper.skills">
+            <app-skill [skill]="skill"></app-skill>
+          </ng-container>  
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

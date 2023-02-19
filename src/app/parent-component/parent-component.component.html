@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-6">
+<h1>@Input</h1>
+      <!-- 
+        <app-child-component
+        [message]="'Message en provenance du parent'" ></app-child-component>
+      -->
+      <form (ngSubmit)="startCooking()">
+        <app-child-component
+        [startCooking]="cook" 
+        [numberOfCookies]="8"
+        [flour]="flourQuantity" 
+        [salt]="saltQuantity" 
+        [sugar]="sugarQuantity"
+        [egg]="eggQuantity">
+        ></app-child-component>
+        
+        <h2>Côté parent</h2>
+        
+        <div class="mb-3">
+          <label for="flour" class="form-label">Farine :</label>
+          <input class="form-control" id="flour" type="number" name="flour" [(ngModel)]="flourQuantity">
+        </div>
+        <div class="mb-3">
+          <label for="salt"  class="form-label">Sel :</label>
+          <input class="form-control" id="salt" type="number" name="salt" [(ngModel)]="saltQuantity">
+        </div>
+
+        <div class="mb-3">
+          <label for="sugar"  class="form-label">Sucre :</label>
+          <input  class="form-control" id="sugar" type="number" name="sugar" [(ngModel)]="sugarQuantity">
+        </div>
+        <div class="mb-3">
+          <label for="egg"  class="form-label">Oeuf :</label>
+          <input class="form-control" id="egg" type="number" name="egg" [(ngModel)]="eggQuantity">
+        </div>
+        <div class="mb-3">
+          <label for="number"  class="form-label">Nombre de cookies :</label>
+          <input class="form-control" id="number" type="number" name="number" [(ngModel)]="numberOfCookies">
+        </div>
+
+        <div>
+          <button class="btn btn-primary" type="submit">Cuisiner 🍪</button>
+        </div>
+
+      </form>
+
+
+
+
+    </div>
+  </div>
+</div>
