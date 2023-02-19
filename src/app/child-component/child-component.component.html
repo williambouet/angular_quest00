@@ -2,6 +2,7 @@
       <!-- {{ message }} -->
 
       <h2>Côté enfant:</h2>
+      <div *ngIf="startCooking && flour && salt && sugar && egg"> 
       <p>Préparation de {{numberOfCookies}} cookies avec :</p>
       <ul>
         <li>{{flour}} g de farine</li>
@@ -10,3 +11,5 @@
         <li>{{egg}} oeufs</li>
       </ul>
 
+      <button (click)="sendCookies()" class="btn btn-primary"><i class="bi bi-basket2 me-2"></i>Envoyer les cookies</button>
+    </div>

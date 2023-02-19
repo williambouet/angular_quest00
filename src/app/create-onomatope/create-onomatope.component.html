@@ -1,0 +1,13 @@
+<h2 class="mt-5">Création d'onomatope</h2>
+
+<form [formGroup]="onoForm" (ngSubmit)="onSubmit()">
+
+  <div class="mb-3">
+    <label for="ono" class="form-label">Nom de l'onomatope</label>
+    <input type="text" class="form-control" id="ono" [(ngModel)]="onomatope"  name="onomatope" formControlName="onomatope" />
+  </div>
+
+  <button type="submit" class="btn btn-outline-primary">
+    <i class="bi bi-plus pe-2"></i>Ajouter
+  </button>
+</form>

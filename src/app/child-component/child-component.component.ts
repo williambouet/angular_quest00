@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child-component',
@@ -25,6 +25,13 @@ export class ChildComponentComponent implements OnInit {
 
   @Input()
   egg: number = 0;
+
+  @Output()
+  cookies: EventEmitter<number> = new EventEmitter();
+
+  sendCookies(): void {
+    this.cookies.emit(this.numberOfCookies);
+  }
 
   ngOnInit() {}
 }
