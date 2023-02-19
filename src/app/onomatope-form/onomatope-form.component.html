@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-sm-6">
+      <h2>Onomatope</h2>
+
+      <form (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+          <label for="ono" class="form-label">Nom de l'onomatope</label>
+          <select class="form-select" id="ono" name="ono">
+            <ng-container *ngFor="let onomatope of onomatopes">
+              <option value="{{ onomatope }}">{{ onomatope }}</option>
+            </ng-container>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          <i class="bi bi-send pe-2"></i>Envoyer
+        </button>
+      </form>
+
+      <app-onomatope-list (newOnomatopeList)="onReceiveListOnomatope($event)"></app-onomatope-list>
+    </div>
+  </div>
+</div>

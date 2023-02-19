@@ -3,189 +3,96 @@
     <div class="col-12 col-sm-6">
       <h2 class="mt-2">Formulaire d'inscription</h2>
 
-      <form  (ngSubmit)="modelForm.valid && onSubmit()" [formGroup]="modelForm" #signUpForm="ngForm">
+      <form (ngSubmit)="modelForm.valid && onSubmit()" [formGroup]="modelForm" #signUpForm="ngForm">
         <ul class="list-group mb-3">
-          <ng-container *ngIf ="signUpForm.submitted">
-            <li class="list-group-item list-group-item-success">Formulaire soumit :  {{ signUpForm.submitted }}</li>
+          <ng-container *ngIf="signUpForm.submitted">
+            <li class="list-group-item list-group-item-success">Formulaire soumit : {{ signUpForm.submitted }}</li>
           </ng-container>
-          <ng-container *ngIf ="!signUpForm.submitted">
-            <li class="list-group-item list-group-item-danger">Formulaire soumit :  {{ signUpForm.submitted }}</li>
+          <ng-container *ngIf="!signUpForm.submitted">
+            <li class="list-group-item list-group-item-danger">Formulaire soumit : {{ signUpForm.submitted }}</li>
           </ng-container>
 
-          <ng-container *ngIf ="modelForm.valid">
-            <li class="list-group-item list-group-item-success">Formulaire valide :  {{ signUpForm.valid }}</li>
+          <ng-container *ngIf="modelForm.valid">
+            <li class="list-group-item list-group-item-success">Formulaire valide : {{ signUpForm.valid }}</li>
           </ng-container>
-          <ng-container *ngIf ="!modelForm.valid">
-            <li class="list-group-item list-group-item-danger">Formulaire valide :  {{ signUpForm.valid }}</li>
+          <ng-container *ngIf="!modelForm.valid">
+            <li class="list-group-item list-group-item-danger">Formulaire valide : {{ signUpForm.valid }}</li>
           </ng-container>
-     
-        
+
+
         </ul>
         <div class="mb-3">
-          <label for="inputFirstname" class="form-label"
-            >Prénom
+          <label for="inputFirstname" class="form-label">Prénom
             <ng-container *ngIf="modelForm.controls.firstname.errors && signUpForm.submitted">
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.firstname.errors?.['required']"
-                  >Le prénom est requis</small
-                ></span
-              >
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.firstname.errors['maxlength']"
-                  >La longueur maximale est de 255 caractères</small
-                ></span
-              >
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.firstname.errors['minlength']"
-                  >La longueur minimale est de 3 caractères</small
-                ></span
-              >
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.firstname.errors?.['required']">Le prénom est requis</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.firstname.errors['maxlength']">La longueur maximale est de 255
+                  caractères</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.firstname.errors['minlength']">La longueur minimale est de 3
+                  caractères</small></span>
             </ng-container>
           </label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputFirstname"
-            required
-            maxlength="255"
-            minlength="3"
-            name="firstname"
-            formControlName="firstname"
-          />
+          <input type="text" class="form-control" id="inputFirstname" required maxlength="255" minlength="3"
+            name="firstname" formControlName="firstname" />
         </div>
 
         <div class="mb-3">
-          <label for="inputLastname" class="form-label"
-            >Nom
+          <label for="inputLastname" class="form-label">Nom
             <ng-container *ngIf="modelForm.controls.lastname.errors && signUpForm.submitted">
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.lastname.errors['required']"
-                  >Le nom est requis</small
-                ></span
-              ><span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.lastname.errors['maxlength']"
-                  >La longueur maximale est de 255 caractères</small
-                ></span
-              >
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.lastname.errors['minlength']"
-                  >La longueur minimale est de 3 caractères</small
-                ></span
-              >
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.lastname.errors['required']">Le nom est requis</small></span><span
+                class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.lastname.errors['maxlength']">La longueur maximale est de 255
+                  caractères</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.lastname.errors['minlength']">La longueur minimale est de 3
+                  caractères</small></span>
             </ng-container>
           </label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputLastname"
-            required
-            maxlength="255"
-            minlength="3"
-            name="lastname"
-            formControlName="lastname"
-          />
+          <input type="text" class="form-control" id="inputLastname" required maxlength="255" minlength="3"
+            name="lastname" formControlName="lastname" />
         </div>
 
         <div class="mb-3">
-          <label for="inputEmail" class="form-label"
-            >Adresse email de connexion
+          <label for="inputEmail" class="form-label">Adresse email de connexion
             <ng-container *ngIf="modelForm.controls.email.errors && signUpForm.submitted">
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.email.errors['required']"
-                  >L'email est requis</small
-                ></span
-              >
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.email.errors['maxlength']"
-                  >La longueur maximale est de 255 caractères</small
-                ></span
-              >
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.email.errors['email']"
-                  >L'email n'est pas conforme</small
-                ></span
-              >
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.email.errors['required']">L'email est requis</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.email.errors['maxlength']">La longueur maximale est de 255
+                  caractères</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.email.errors['email']">L'email n'est pas conforme</small></span>
             </ng-container>
           </label>
-          <input
-            type="email"
-            class="form-control"
-            id="inputEmail"
-            aria-describedby="emailHelp"
-            required
-            maxlength="255"
-            name="email"
-            formControlName="email"
-
-          />
+          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required maxlength="255"
+            name="email" formControlName="email" />
           <div id="emailHelp" class="form-text">
             Nous ne partagerons pas cette information.
           </div>
         </div>
 
         <div class="mb-3">
-          <label for="inputPassword" class="form-label"
-            >Mot de passe
+          <label for="inputPassword" class="form-label">Mot de passe
             <ng-container *ngIf="modelForm.controls.password.errors && signUpForm.submitted">
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.password.errors['required']"
-                  >Le mot de passe est requis</small
-                ></span
-              >
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.password.errors['maxlength']"
-                  >La longueur maximale est de 255 caractères</small
-                ></span
-              >
-              <span class="m-1 p-0"
-                ><small
-                  class="fs-small text-danger"
-                  *ngIf="modelForm.controls.password.errors['minlength']"
-                  >La longueur minimale est de 8 caractères</small
-                ></span
-              >
-              <span class="m-1 p-0"
-              ><small
-                class="fs-small text-danger"
-                *ngIf="modelForm.controls.password.errors?.['pattern']"
-                >Le mot de passe n'est pas conforme</small
-              ></span
-            >
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.password.errors['required']">Le mot de passe est requis</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.password.errors['maxlength']">La longueur maximale est de 255
+                  caractères</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.password.errors['minlength']">La longueur minimale est de 8
+                  caractères</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="modelForm.controls.password.errors?.['pattern']">Le mot de passe n'est pas
+                  conforme</small></span>
             </ng-container>
           </label>
-          <input
-            type="password"
-            class="form-control"
-            id="inputPassword"
-            required
-            maxlength="255"
-            minlength="8"
-            name="password"
-            formControlName="password"
-            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
-          />
+          <input type="password" class="form-control" id="inputPassword" required maxlength="255" minlength="8"
+            name="password" formControlName="password"
+            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" />
         </div>
 
         <button type="submit" class="btn btn-primary">

@@ -31,9 +31,12 @@ import { ChildComponentComponent } from './child-component/child-component.compo
 import { ParentComponentComponent } from './parent-component/parent-component.component';
 import { DevelopperComponent } from './developper/developper.component';
 import { SkillComponent } from './skill/skill.component';
+import { OnomatopeFormComponent } from './onomatope-form/onomatope-form.component';
+import { OnomatopeListComponent } from './onomatope-list/onomatope-list.component';
+import { CreateOnomatopeComponent } from './create-onomatope/create-onomatope.component';
 
 @NgModule({
-  declarations: [							
+  declarations: [	
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -50,13 +53,16 @@ import { SkillComponent } from './skill/skill.component';
     NavbarComponent,
     CatalogComponent,
     HeroFormComponent,
-      SignUpComponent,
-      ReactiveFormComponent,
-      SearchMovieComponent,
-      ChildComponentComponent,
-      ParentComponentComponent,
-      DevelopperComponent,
-      SkillComponent
+    SignUpComponent,
+    ReactiveFormComponent,
+    SearchMovieComponent,
+    ChildComponentComponent,
+    ParentComponentComponent,
+    DevelopperComponent,
+    SkillComponent,
+    OnomatopeFormComponent,
+    OnomatopeListComponent,
+      CreateOnomatopeComponent
    ],
   imports: [
     BrowserModule,
