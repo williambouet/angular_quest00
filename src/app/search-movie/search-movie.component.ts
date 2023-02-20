@@ -7,28 +7,34 @@ import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn,
   styleUrls: ['./search-movie.component.css']
 })
 export class SearchMovieComponent {
-  lowYear: number = 1900;
-  now: Date = new Date();
-  yearOfNow: number = this.now.getFullYear();
+  public lowYear: number;
+  now: Date;
+  yearOfNow: number;
   types:string[] = ['film', 'série', 'épisode'];
   descriptions: string[] = ['complète', 'courte'];
   searchForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {
-  }
+    this.lowYear=1900
+    this.now= new Date();
+    this.yearOfNow = this.now.getFullYear();
+    
   
-  
-  ngOnInit() {
     this.searchForm = this.fb.group({
       groupIdTitle: this.fb.group({
         id: [''],
         title: [''],
       }, { validators: [this.isRequiredValidator()] },),
-  
+      
       type:[this.types],
       year: ['', [Validators.required, this.rangeDateValidator()]], 
       descriptions: [this.descriptions],
     })
+    
+  }
+  
+  
+  ngOnInit() {
   
     
     this.searchForm.setValue({
@@ -51,8 +57,8 @@ export class SearchMovieComponent {
 rangeDateValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
     
-    const valueYear: number = control.get('year')?.value;
-console.log(valueYear)
+    const valueYear: number = control.value;
+
     if ((valueYear < this.lowYear) || (valueYear > this.yearOfNow)) {
       return { 'minMax': { value: true, years: [this.lowYear,  this.yearOfNow] }};
     } else {
@@ -62,11 +68,11 @@ console.log(valueYear)
 }
   
 /* rangeDateValidator(control: AbstractControl): ValidationErrors | null {
-    
-    const valueYear: number = control.get('year')?.value;
-console.log(valueYear)
+
+    const valueYear: number = control.value;
+
     if ((valueYear < this.lowYear) || (valueYear > this.yearOfNow)) {
-      return { 'minMax': { value: true, years: [this.lowYear,  this.yearOfNow] }};
+      return { 'minMax': { value: true,  years: [this.lowYear,  this.yearOfNow] }};
     } else {
       return null;
   }
