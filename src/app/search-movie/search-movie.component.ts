@@ -20,12 +20,11 @@ export class SearchMovieComponent {
     groupIdTitle: this.fb.group({
       id: [''],
       title: [''],
-    }, this.validatorOneRequired(id, title)),
+    }, this.validatorOneRequired(id, title)), //j'ai aussi essayé avec les {} mais ça casse encore
     types: this.fb.array(this.types),
     year: ['', [Validators.required, Validators.min(this.lowYear), Validators.max(this.yearOfNow)]], 
     descriptions: this.fb.array(this.descriptions,),
   })
-
 
   ngOnInit() {
   
