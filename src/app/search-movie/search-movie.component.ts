@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, ValidationErrors, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-search-movie',
@@ -17,17 +17,24 @@ export class SearchMovieComponent {
   constructor(private fb: FormBuilder) { }
 
   searchForm = this.fb.group({
-    id: [''], 
-    title: ['', Validators.required],
+    groupIdTitle: this.fb.group({
+      id: [''],
+      title: [''],
+    }, this.validatorOneRequired(id, title)),
     types: this.fb.array(this.types),
     year: ['', [Validators.required, Validators.min(this.lowYear), Validators.max(this.yearOfNow)]], 
     descriptions: this.fb.array(this.descriptions,),
   })
 
+
   ngOnInit() {
   
   }
 
+  validatorOneRequired(id: AbstractControl, title: AbstractControl ): ValidationErrors | null {
+
+    return null
+  }
 
   onSubmit() {
     console.log(this.searchForm.value)
