@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, ValidationErrors, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-search-movie',
@@ -12,27 +12,79 @@ export class SearchMovieComponent {
   yearOfNow: number = this.now.getFullYear();
   types:string[] = ['film', 'série', 'épisode'];
   descriptions: string[] = ['complète', 'courte'];
-  
+  searchForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
-
-  searchForm = this.fb.group({
-    groupIdTitle: this.fb.group({
-      id: [''],
-      title: [''],
-    }, this.validatorOneRequired(id, title)), //j'ai aussi essayé avec les {} mais ça casse encore
-    types: this.fb.array(this.types),
-    year: ['', [Validators.required, Validators.min(this.lowYear), Validators.max(this.yearOfNow)]], 
-    descriptions: this.fb.array(this.descriptions,),
-  })
-
-  ngOnInit() {
-  
+  constructor(private fb: FormBuilder) {
   }
+  
+  
+  ngOnInit() {
+    this.searchForm = this.fb.group({
+      groupIdTitle: this.fb.group({
+        id: [''],
+        title: [''],
+      }, { validators: [this.isRequiredValidator()] },),
+  
+      type:[this.types],
+      year: ['', [Validators.required, this.rangeDateValidator()]], 
+      descriptions: [this.descriptions],
+    })
+  
+    
+    this.searchForm.setValue({
+      groupIdTitle: {
+        id: '',
+        title:''
+      },
+      year: null,
+      type: this.types[1],
+      descriptions: [''], 
+    }
+    )
+    
+    this.searchForm.patchValue({
+      descriptions: this.descriptions[1],
+    })
+    
+}
 
-  validatorOneRequired(id: AbstractControl, title: AbstractControl ): ValidationErrors | null {
+rangeDateValidator(): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    
+    const valueYear: number = control.get('year')?.value;
+console.log(valueYear)
+    if ((valueYear < this.lowYear) || (valueYear > this.yearOfNow)) {
+      return { 'minMax': { value: true, years: [this.lowYear,  this.yearOfNow] }};
+    } else {
+      return null;
+    }
+  };
+}
+  
+/* rangeDateValidator(control: AbstractControl): ValidationErrors | null {
+    
+    const valueYear: number = control.get('year')?.value;
+console.log(valueYear)
+    if ((valueYear < this.lowYear) || (valueYear > this.yearOfNow)) {
+      return { 'minMax': { value: true, years: [this.lowYear,  this.yearOfNow] }};
+    } else {
+      return null;
+  }
+} */
+  
 
-    return null
+isRequiredValidator(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      
+      const valueId = control.get('id')?.value;
+      const valueTitle = control.get('title')?.value;
+
+      if (!(valueId) && !(valueTitle)) {
+        return { 'isRequired': { value: true } };
+      } else {
+        return null;
+      }
+    };
   }
 
   onSubmit() {

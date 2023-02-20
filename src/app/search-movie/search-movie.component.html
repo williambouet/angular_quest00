@@ -29,7 +29,12 @@
             </li>
           </ng-container>
         </ul>
-
+        <!-- GROUPE ID+TITLE -->
+        <div formGroupName="groupIdTitle">
+          <ng-container *ngIf="searchForm.controls['groupIdTitle'].errors && movieForm.submitted">
+            <span class="m-1 p-0"><small class="fs-small text-danger"
+                *ngIf="searchForm.controls['groupIdTitle'].errors?.['isRequired']">Le titre ou l'id est requis</small></span>
+          </ng-container>
         <!-- ID -->
         <div class="mb-3">
           <label for="inputId" class="form-label">Identifiant </label>
@@ -39,14 +44,11 @@
         <!-- TITLE -->
         <div class="mb-3">
           <label for="inputTitle" class="form-label">Titre
-            <ng-container *ngIf="searchForm.controls.title.errors && movieForm.submitted">
-              <span class="m-1 p-0"><small class="fs-small text-danger"
-                  *ngIf="searchForm.controls.title.errors?.['required']">Le titre est requis</small></span>
-            </ng-container>
           </label>
           <input type="text" class="form-control" id="inputTitle" name="title"
             formControlName="title" />
         </div>
+      </div>
 
         <!-- TYPE -->
         <div class="mb-3">
@@ -62,17 +64,14 @@
         <!-- YEAR -->
         <div class="mb-3">
           <label for="inputYear" class="form-label">Année de sortie
-            <ng-container *ngIf="searchForm.controls.year.errors && movieForm.submitted">
+            <ng-container *ngIf="searchForm.controls['year'].errors && movieForm.submitted">
               <span class="m-1 p-0"><small class="fs-small text-danger"
-                  *ngIf="searchForm.controls.year.errors['required']">L'année est requis</small></span>
+                  *ngIf="searchForm.controls['year'].errors['required']">L'année est requis</small></span>
               <span class="m-1 p-0"><small class="fs-small text-danger"
-                  *ngIf="searchForm.controls.year.errors['max']">L'année ne peut être supérieure à celle
-                  actuelle</small></span>
-              <span class="m-1 p-0"><small class="fs-small text-danger"
-                  *ngIf="searchForm.controls.year.errors['min']">L'année ne peut être inférieure à {{lowYear}}</small></span>
+                  *ngIf="searchForm.controls['year'].errors['minMax']">L'année ne peut être inférieure à {{lowYear}} ou supérieure à {{ yearOfNow }}</small></span>
             </ng-container>
           </label>
-          <input type="number" class="form-control" id="inputYear" name="year" formControlName="year" />
+          <input type="number" class="form-control" id="inputYear" name="year" formControlName="year"/>
         </div>
 
         <!-- DESCRIPTION -->
@@ -86,9 +85,8 @@
           </select>
         </div>
 
-          <button type="submit" class="btn btn-primary">
-            <i class="bi bi-search me-2"></i>Recherche
-          </button>
+          <button type="submit" class="btn btn-primary" ><i class="bi bi-search me-2"></i>Recherche</button>
+
       </form>
     </div>
   </div>
