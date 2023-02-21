@@ -13,12 +13,10 @@ export class CocktailJsonComponent implements OnInit {
   constructor(public cocktailJsonService: CocktailJsonService) { 
     this.cocktailJsonService.getCocktails().subscribe(cocktailsFromJsonFile => {
       this.cocktails = cocktailsFromJsonFile;
+      console.log(this.cocktails)
     });
   }
   
-  ngOnInit() {
-    console.log(this.cocktails)
-
-  }
+  ngOnInit() { }
 
 }
