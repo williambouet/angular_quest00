@@ -27,16 +27,19 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
-import { ChildComponentComponent } from './child-component/child-component.component';
-import { ParentComponentComponent } from './parent-component/parent-component.component';
+import { ChildComponentComponent } from './cp-child-component/child-component.component';
+import { ParentComponentComponent } from './cp-parent-component/parent-component.component';
 import { DevelopperComponent } from './developper/developper.component';
-import { SkillComponent } from './skill/skill.component';
+import { SkillComponent } from './developper-skill/skill.component';
 import { OnomatopeFormComponent } from './onomatope-form/onomatope-form.component';
 import { OnomatopeListComponent } from './onomatope-list/onomatope-list.component';
 import { CreateOnomatopeComponent } from './onomatope-create/create-onomatope.component';
+import { KittenFormComponent } from './kitten-form/kitten-form.component';
+import { KittenAsideComponent } from './kitten-aside/kitten-aside.component';
+import { KittenListComponent } from './kitten-list/kitten-list.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [			
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -62,7 +65,10 @@ import { CreateOnomatopeComponent } from './onomatope-create/create-onomatope.co
     SkillComponent,
     OnomatopeFormComponent,
     OnomatopeListComponent,
-      CreateOnomatopeComponent
+    CreateOnomatopeComponent,
+      KittenFormComponent,
+      KittenAsideComponent,
+      KittenListComponent
    ],
   imports: [
     BrowserModule,
