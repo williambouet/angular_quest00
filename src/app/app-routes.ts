@@ -13,6 +13,7 @@ import { SearchMovieComponent } from './search-movie/search-movie.component';
 import { ParentComponentComponent } from './cp-parent-component/parent-component.component';
 import { DevelopperComponent } from './developper/developper.component';
 import { OnomatopeFormComponent } from './onomatope-form/onomatope-form.component';
+import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 
 const ROUTES: Routes = [
   { path: 'fiche', component: CardComponent },
@@ -30,6 +31,7 @@ const ROUTES: Routes = [
   { path: 'parent', component: ParentComponentComponent },
   { path: 'développeur', component: DevelopperComponent },
   { path: 'onomatope', component: OnomatopeFormComponent },
+  { path: 'service-cocktails', component: CocktailListComponent},
 ];
 
 export { ROUTES };
