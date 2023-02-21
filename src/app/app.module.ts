@@ -37,9 +37,10 @@ import { CreateOnomatopeComponent } from './onomatope-create/create-onomatope.co
 import { KittenFormComponent } from './kitten-form/kitten-form.component';
 import { KittenAsideComponent } from './kitten-aside/kitten-aside.component';
 import { KittenListComponent } from './kitten-list/kitten-list.component';
+import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -68,7 +69,8 @@ import { KittenListComponent } from './kitten-list/kitten-list.component';
     CreateOnomatopeComponent,
       KittenFormComponent,
       KittenAsideComponent,
-      KittenListComponent
+      KittenListComponent,
+      CocktailListComponent
    ],
   imports: [
     BrowserModule,
