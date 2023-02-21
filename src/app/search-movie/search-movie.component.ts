@@ -80,10 +80,10 @@ rangeDateValidator(): ValidatorFn {
   
 
 isRequiredValidator(): ValidatorFn {
-    return (control: AbstractControl): ValidationErrors | null => {
+    return (controls: AbstractControl): ValidationErrors | null => {
       
-      const valueId = control.get('id')?.value;
-      const valueTitle = control.get('title')?.value;
+      const valueId = controls.get('id')?.value;
+      const valueTitle = controls.get('title')?.value;
 
       if (!(valueId) && !(valueTitle)) {
         return { 'isRequired': { value: true } };
