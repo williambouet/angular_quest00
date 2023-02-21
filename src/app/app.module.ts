@@ -40,6 +40,7 @@ import { HightLightDirective } from './directive/hightLight.directive';
 import { DisplayGuestsDirective } from './directive/displayGuests.directive';
 import { ChangeMovieDirective } from './directive/changeMovie.directive';
 import { DisplayMovieDirective } from './directive/displayMovie.directive';
+import { LoginFormComponent } from './loginForm/loginForm.component';
 
 @NgModule({
   declarations: [					
@@ -73,6 +74,7 @@ import { DisplayMovieDirective } from './directive/displayMovie.directive';
       KittenAsideComponent,
       KittenListComponent,
       CocktailListComponent,
+      LoginFormComponent,
     CocktailJsonComponent,
       
    ],

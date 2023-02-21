@@ -14,6 +14,7 @@ import { ParentComponentComponent } from './cp-parent-component/parent-component
 import { DevelopperComponent } from './developper/developper.component';
 import { OnomatopeFormComponent } from './onomatope-form/onomatope-form.component';
 import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
+import { LoginFormComponent } from './loginForm/loginForm.component';
 import { CocktailJsonComponent } from './cocktail-json/cocktail-json.component';
 
 const ROUTES: Routes = [
@@ -33,6 +34,7 @@ const ROUTES: Routes = [
   { path: 'développeur', component: DevelopperComponent },
   { path: 'onomatope', component: OnomatopeFormComponent },
   { path: 'service-cocktails', component: CocktailListComponent },
+  { path: 'atelier-formulaire', component: LoginFormComponent },
   { path: 'service-cocktails-json', component: CocktailJsonComponent},
 ];
 

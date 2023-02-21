@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-sm-6">
+      <h2 class="mt-2">Atelier Formulaire d'inscription</h2>
+
+      <form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()" >
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">Email
+            <ng-container *ngIf="email.errors">
+              <span *ngIf="email.errors?.['required']" class="text-danger ms-3">L'email est requis</span>
+              <span *ngIf="email.errors?.['pattern']" class="text-danger  ms-3">L'email n'est pas conforme</span>
+            </ng-container>
+          </label>
+          <input type="email" class="form-control" id="inputEmail" required #email="ngModel" [(ngModel)]="userAtelier.email" name="email" [pattern]="PATTERN">
+        </div>
+
+        <div class="mb-3">
+          <label for="inputPassword" class="form-label">Mot de passe
+            <ng-container  *ngIf="password.errors">
+              <span *ngIf="password.errors?.['required']" class="text-danger ms-3">Le mot de passe est requis</span>
+              <span *ngIf="password.errors?.['minlength']" class="text-danger ms-3">La longueur doit être supérieur ou égale à 6 caractères</span>
+            </ng-container>
+
+          </label>
+          <input type="password" class="form-control" id="inputPassword" required #password="ngModel" [(ngModel)]="userAtelier.password" name="password" minlength="6" >
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          <i class="bi bi-door-open"></i>Entrer
+        </button>
+      </form>
+    
+    </div>
+  </div>
+</div>
