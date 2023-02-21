@@ -38,9 +38,10 @@ import { KittenFormComponent } from './kitten-form/kitten-form.component';
 import { KittenAsideComponent } from './kitten-aside/kitten-aside.component';
 import { KittenListComponent } from './kitten-list/kitten-list.component';
 import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
+import { LoginFormComponent } from './loginForm/loginForm.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [					
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -70,7 +71,8 @@ import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
       KittenFormComponent,
       KittenAsideComponent,
       KittenListComponent,
-      CocktailListComponent
+      CocktailListComponent,
+      LoginFormComponent
    ],
   imports: [
     BrowserModule,
