@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <ng-container *ngFor="let cocktail of cocktails">
+        <div class="col-12 col-sm-4 g-2" >
+
+        <div class="card " style="width: 18rem;">
+          <img src="{{ cocktail.image }}" class="card-img-top" style="height: 15rem; object-fit: cover;" alt="une image de cocktail">
+          <div class="card-body">
+            <h5 class="card-title">{{ cocktail.name }}</h5>
+            <p class="card-text">{{ cocktail.price }}€ </p>
+          </div>
+        </div>
+
+      </div>
+      </ng-container>
+  </div>
+</div>

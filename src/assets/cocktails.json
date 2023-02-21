@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Lait fraise",
+    "price": 3,
+    "image": "https://img.freepik.com/photos-gratuite/milkshake-table_144627-27512.jpg?size=626&ext=jpg&ga=GA1.2.1845118457.1666450890&semt=ais"
+  },
+  {
+    "name": "Lait menthe",
+    "price": 3,
+    "image": "https://img.freepik.com/photos-gratuite/boisson-ayran-menthe-concombre-verre-table-bois_123827-21428.jpg?size=626&ext=jpg&ga=GA1.2.1845118457.1666450890&semt=ais"
+  },
+
+  {
+    "name": "Lait",
+    "price": 2,
+    "image": "https://media.istockphoto.com/id/1337307092/fr/photo/verser-du-lait-frais-dans-du-verre.jpg?s=612x612&w=0&k=20&c=K8g1yfLddmDCrSCG-36Nl8jUeJmT7Qv4i0cULVRwm00="
+  },
+
+  {
+    "name": "Fessée",
+    "price": 6,
+    "image": "https://static.actu.fr/uploads/2021/08/la-fessee-960x640.jpg"
+  },
+
+  {
+    "name": "Kekette",
+    "price": 4,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWUIA3qc92LWVKkrWZwo4cWqnGC7_sCg1_uOfBATCe1lzJxpWJGAdP4-o4jkJlQ_Au8EA&usqp=CAU"
+  },
+
+  {
+    "name": "Levrette",
+    "price": 4,
+    "image": "https://static.actu.fr/uploads/2021/08/levrette-ok-960x640.jpg"
+  },
+
+  {
+    "name": "Mort subite",
+    "price": 3,
+    "image": "https://static.actu.fr/uploads/2021/08/mort-subite-ok-960x640.jpg"
+  }
+]
