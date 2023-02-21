@@ -34,9 +34,12 @@ import { SkillComponent } from './developper-skill/skill.component';
 import { OnomatopeFormComponent } from './onomatope-form/onomatope-form.component';
 import { OnomatopeListComponent } from './onomatope-list/onomatope-list.component';
 import { CreateOnomatopeComponent } from './onomatope-create/create-onomatope.component';
+import { KittenFormComponent } from './kitten-form/kitten-form.component';
+import { KittenAsideComponent } from './kitten-aside/kitten-aside.component';
+import { KittenListComponent } from './kitten-list/kitten-list.component';
 
 @NgModule({
-  declarations: [
+  declarations: [			
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -63,7 +66,10 @@ import { CreateOnomatopeComponent } from './onomatope-create/create-onomatope.co
     OnomatopeFormComponent,
     OnomatopeListComponent,
     CreateOnomatopeComponent,
-  ],
+      KittenFormComponent,
+      KittenAsideComponent,
+      KittenListComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
