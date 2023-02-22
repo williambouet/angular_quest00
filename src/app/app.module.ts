@@ -42,9 +42,11 @@ import { ChangeMovieDirective } from './directive/changeMovie.directive';
 import { DisplayMovieDirective } from './directive/displayMovie.directive';
 import { LoginFormComponent } from './loginForm/loginForm.component';
 import { NasaComponent } from './nasa/nasa.component';
+import { AtelierButtonComponent } from './atelier-button/atelier-button.component';
+import { AtelierButtonParentComponent } from './atelier-button-parent/atelier-button-parent.component';
 
 @NgModule({
-  declarations: [						
+  declarations: [								
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -77,7 +79,9 @@ import { NasaComponent } from './nasa/nasa.component';
       CocktailListComponent,
       LoginFormComponent,
     CocktailJsonComponent,
-      NasaComponent
+      NasaComponent,
+      AtelierButtonComponent,
+      AtelierButtonParentComponent
    ],
   imports: [
     BrowserModule,
