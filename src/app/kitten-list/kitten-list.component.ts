@@ -18,7 +18,7 @@ export class KittenListComponent implements OnInit {
   ngOnInit() {}
 
   adoptThisKitten(kittentarget: Kitten) {
-    this.kittens?.splice(this.kittens?.indexOf(kittentarget, 0));
+    this.kittens?.splice(this.kittens?.indexOf(kittentarget), 1);
     kittentarget.isAdopted = true;
     this.kittens?.push(kittentarget);
   }
@@ -26,5 +26,6 @@ export class KittenListComponent implements OnInit {
   receiveNewKitten(event: Kitten) {
     this.kittens?.push(event);
   }
+
 
 }

@@ -28,6 +28,11 @@
     
     <!-- KITTEN ADOPTED -->
     <div class="col col-sm-4">
-      <app-kitten-aside></app-kitten-aside>
+      <ng-container *ngFor="let kitten of kittens">
+        <ng-container *ngIf="kitten.isAdopted === true">
+      <app-kitten-aside [kittenAdopted]="kittens"></app-kitten-aside>
+      
+    </ng-container>
+  </ng-container>
     </div>
   </div>
