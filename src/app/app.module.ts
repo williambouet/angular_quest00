@@ -41,9 +41,10 @@ import { DisplayGuestsDirective } from './directive/displayGuests.directive';
 import { ChangeMovieDirective } from './directive/changeMovie.directive';
 import { DisplayMovieDirective } from './directive/displayMovie.directive';
 import { LoginFormComponent } from './loginForm/loginForm.component';
+import { NasaComponent } from './nasa/nasa.component';
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -76,7 +77,7 @@ import { LoginFormComponent } from './loginForm/loginForm.component';
       CocktailListComponent,
       LoginFormComponent,
     CocktailJsonComponent,
-      
+      NasaComponent
    ],
   imports: [
     BrowserModule,
