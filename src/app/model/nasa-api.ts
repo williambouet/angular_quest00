@@ -5,6 +5,5 @@ export class NasaApi {
         public explanation: string,
         public title: string,
         public url: string,
-
     ){}
 }

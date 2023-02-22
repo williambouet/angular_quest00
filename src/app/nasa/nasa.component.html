@@ -5,15 +5,13 @@
       <div class="card mb-3 mt-3">
         <div class="row g-0">
           <div class="col-md-4">
-            <img
-              src="{{imgOfTheDay.url ? imgOfTheDay.url :  'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1200px-NASA_logo.svg.png' }}"
-              class="img-fluid rounded-start" alt="Image du jour Nasa">
+            <img src="{{ imgOfTheDay?.url ? imgOfTheDay?.url :  'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1200px-NASA_logo.svg.png' }}" class="img-fluid rounded-start" alt="Image du jour Nasa">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">{{imgOfTheDay.title}}</h5>
-              <p class="card-text">{{imgOfTheDay.explanation}}</p>
-              <p class="card-text"><small class="text-muted">{{imgOfTheDay.date}}</small></p>
+              <h5 class="card-title">{{imgOfTheDay?.title}}</h5>
+              <p class="card-text">{{imgOfTheDay?.explanation}}</p>
+              <p class="card-text"><small class="text-muted">{{imgOfTheDay?.copyright}} - {{imgOfTheDay?.date}}</small></p>
             </div>
           </div>
         </div>
