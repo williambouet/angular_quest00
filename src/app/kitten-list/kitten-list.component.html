@@ -1,3 +1,33 @@
-<p>
-  kitten-list works!
-</p>
+<div class="container">
+  <div class="row d-flex justify-content-center g-5">
+
+    <!-- KITTEN FORM -->
+    <div class="col col-sm-4">
+      <app-kitten-form (newKitten)="receiveNewKitten($event)"></app-kitten-form>
+    </div>
+
+    <!-- KITTEN LIST -->
+    <div class="col col-sm-4">
+
+      <ng-container *ngFor="let kitten of kittens">
+        <ng-container *ngIf="kitten.isAdopted === false">
+
+          <div class="card mt-2" style="width: 10rem;">
+            <img src="{{ kitten.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ kitten.name }}</h5>
+              <p class="card-text">Race : {{ kitten.race }}</p>
+              <p class="card-text">{{ kitten.dateOfBirth }}</p>
+              <button class="btn btn-primary" (click)="adoptThisKitten(kitten)">Adopter</button>
+            </div>
+          </div>
+
+        </ng-container>
+      </ng-container>
+    </div>
+    
+    <!-- KITTEN ADOPTED -->
+    <div class="col col-sm-4">
+      <app-kitten-aside></app-kitten-aside>
+    </div>
+  </div>

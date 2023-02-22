@@ -1,3 +1,68 @@
-<p>
-  kitten-form works!
-</p>
+
+      <!-- KITTEN FORM -->
+      <h2 class="mt-2">Ajouter un catounet</h2>
+
+      <form (ngSubmit)="kittenForm.valid && onSubmit()" [formGroup]="kittenForm" #thisForm="ngForm">
+        <!-- KITTEN NAME -->
+        <div class="mb-3">
+          <label for="inputName" class="form-label">Nom du chat
+            <ng-container *ngIf="kittenForm.controls.name.errors && thisForm.submitted">
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="kittenForm.controls.name.errors?.['required']">Le nom est requis</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="kittenForm.controls.name.errors['maxlength']">La longueur maximale est de 255
+                  caractères</small></span>
+            </ng-container>
+          </label>
+          <input type="text" class="form-control" id="inputName" required maxlength="255" name="name"
+            formControlName="name" />
+        </div>
+
+        <!-- KITTEN RACE -->
+        <div class="mb-3">
+          <label for="inputRace" class="form-label">Race du chat
+            <ng-container *ngIf="kittenForm.controls.race.errors && thisForm.submitted">
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="kittenForm.controls.race.errors?.['required']">La race est requise</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="kittenForm.controls.race.errors['maxlength']">La longueur maximale est de 255
+                  caractères</small></span>
+            </ng-container>
+          </label>
+          <input type="text" class="form-control" id="inputRace" required maxlength="255" name="race"
+            formControlName="race" />
+        </div>
+
+        <!-- KITTEN DATE OF BIRTH -->
+        <div class="mb-3">
+          <label for="inputDOB" class="form-label">Date de naissance du chat
+            <ng-container *ngIf="kittenForm.controls.dateOfBirth.errors && thisForm.submitted">
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="kittenForm.controls.dateOfBirth.errors?.['required']">La date de naissance est
+                  requise</small></span>
+            </ng-container>
+          </label>
+          <input type="date" class="form-control" id="inputDOB" required name="dateOfBirth"
+            formControlName="dateOfBirth" />
+        </div>
+
+        <!-- KITTEN IMAGE -->
+        <div class="mb-3">
+          <label for="inputImage" class="form-label">Lien de l'image du chat
+            <ng-container *ngIf="kittenForm.controls.image.errors && thisForm.submitted">
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="kittenForm.controls.image.errors?.['required']">L'image est requise</small></span>
+              <span class="m-1 p-0"><small class="fs-small text-danger"
+                  *ngIf="kittenForm.controls.image.errors['maxlength']">La longueur maximale est de 255
+                  caractères</small></span>
+            </ng-container>
+          </label>
+          <input type="text" class="form-control" id="inputImage" required maxlength="255" name="image"
+            formControlName="image" />
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">
+          <i class="bi bi-plus-square me-2"></i>Ajouter le catounet
+        </button>
+      </form>
+
