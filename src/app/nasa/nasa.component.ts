@@ -16,28 +16,7 @@ export class NasaComponent implements OnInit {
   ngOnInit() {
     this.nasaService.getImageOfTheDay().subscribe(imgOfTheDayFromNasaService => {
       this.imgOfTheDay = imgOfTheDayFromNasaService;
-      console.log(this.imgOfTheDay);
     });
   }
 
 }
-
-/* @Component({
-  selector: 'app-nasa',
-  templateUrl: './nasa.component.html',
-  styleUrls: ['./nasa.component.css']
-})
-export class NasaComponent implements OnInit {
-  public imgOfTheDay!: string[];
-
-  constructor(public nasaService: NasaService) {
-    this.nasaService.getImageOfTheDay().subscribe(imgOfTheDayFromNasaService => {
-      this.imgOfTheDay = imgOfTheDayFromNasaService;
-      console.log(this.imgOfTheDay);
-    });
-   }
-
-  ngOnInit() {
-  }
-
-} */
