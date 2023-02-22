@@ -14,6 +14,7 @@ export class AtelierButtonParentComponent implements OnInit {
   public style1: { [prop: string]: any; };
   public style2:  { [prop: string]: any; };
   
+  public message: string;
 
   constructor() { 
     this.class = "btn-primary p-5";
@@ -24,9 +25,14 @@ export class AtelierButtonParentComponent implements OnInit {
     this.style1 = { 'color': 'red', 'font-weight':'bolder' };
     this.style2 = { 'color': 'yellow' };
 
+    this.message = "aucun bouton cliqué"
+
   }
 
   ngOnInit() {
+  }
+  receiveFromChild(event: string) {
+    this.message = event;
   }
 
 }
