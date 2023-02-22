@@ -9,16 +9,15 @@ import { NasaService } from '../service/nasa.service';
   styleUrls: ['./nasa.component.css']
 })
 export class NasaComponent implements OnInit {
-  public imgOfTheDay!: NasaApi;
+  public imgOfTheDay?: NasaApi;
 
-  constructor(public nasaService: NasaService) {
+  constructor(public nasaService: NasaService) {}
+  
+  ngOnInit() {
     this.nasaService.getImageOfTheDay().subscribe(imgOfTheDayFromNasaService => {
       this.imgOfTheDay = imgOfTheDayFromNasaService;
       console.log(this.imgOfTheDay);
     });
-   }
-
-  ngOnInit() {
   }
 
 }
