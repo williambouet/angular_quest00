@@ -14,10 +14,3 @@ constructor(public http: HttpClient) { }
     return this.http.get<NasaApi>("https://api.nasa.gov/planetary/apod?api_key=eGDkSUMBz1iK0EjXrQFY5ERYxRJnv6RWEv2hUXvw");
   }
 }
-
-/* constructor(public http: HttpClient) { }
-
-  getImageOfTheDay(): Observable<string[]>{
-    return this.http.get<string[]>("https://api.nasa.gov/planetary/apod?api_key=eGDkSUMBz1iK0EjXrQFY5ERYxRJnv6RWEv2hUXvw");
-  }
-} */

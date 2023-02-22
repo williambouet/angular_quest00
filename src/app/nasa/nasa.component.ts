@@ -14,7 +14,6 @@ export class NasaComponent implements OnInit {
   constructor(public nasaService: NasaService) {
     this.nasaService.getImageOfTheDay().subscribe(imgOfTheDayFromNasaService => {
       this.imgOfTheDay = imgOfTheDayFromNasaService;
-      console.log(this.imgOfTheDay);
     });
    }
 
@@ -22,23 +21,3 @@ export class NasaComponent implements OnInit {
   }
 
 }
-
-/* @Component({
-  selector: 'app-nasa',
-  templateUrl: './nasa.component.html',
-  styleUrls: ['./nasa.component.css']
-})
-export class NasaComponent implements OnInit {
-  public imgOfTheDay!: string[];
-
-  constructor(public nasaService: NasaService) {
-    this.nasaService.getImageOfTheDay().subscribe(imgOfTheDayFromNasaService => {
-      this.imgOfTheDay = imgOfTheDayFromNasaService;
-      console.log(this.imgOfTheDay);
-    });
-   }
-
-  ngOnInit() {
-  }
-
-} */
