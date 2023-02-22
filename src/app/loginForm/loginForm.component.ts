@@ -8,7 +8,6 @@ import { UserAtelier } from '../model/user-atelier';
 })
 export class LoginFormComponent implements OnInit {
   userAtelier: UserAtelier;
-  PATTERN = <const> "[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}";
   
   constructor() {
     this.userAtelier = new UserAtelier('','');
@@ -19,6 +18,9 @@ export class LoginFormComponent implements OnInit {
 
   onSubmit() {
     alert("Bienvenue")
+    this.userAtelier.email="";
+    this.userAtelier.password="";
+    
   }
 
 }

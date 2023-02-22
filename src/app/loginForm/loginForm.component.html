@@ -11,7 +11,7 @@
               <span *ngIf="email.errors?.['pattern']" class="text-danger  ms-3">L'email n'est pas conforme</span>
             </ng-container>
           </label>
-          <input type="email" class="form-control" id="inputEmail" required #email="ngModel" [(ngModel)]="userAtelier.email" name="email" [pattern]="PATTERN">
+          <input type="email" class="form-control" id="inputEmail" required email #email="ngModel" [(ngModel)]="userAtelier.email" name="email" >
         </div>
 
         <div class="mb-3">
