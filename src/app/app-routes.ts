@@ -16,6 +16,7 @@ import { OnomatopeFormComponent } from './onomatope-form/onomatope-form.componen
 import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 import { LoginFormComponent } from './loginForm/loginForm.component';
 import { CocktailJsonComponent } from './cocktail-json/cocktail-json.component';
+import { NasaComponent } from './nasa/nasa.component';
 
 const ROUTES: Routes = [
   { path: 'fiche', component: CardComponent },
@@ -35,7 +36,8 @@ const ROUTES: Routes = [
   { path: 'onomatope', component: OnomatopeFormComponent },
   { path: 'service-cocktails', component: CocktailListComponent },
   { path: 'atelier-formulaire', component: LoginFormComponent },
-  { path: 'service-cocktails-json', component: CocktailJsonComponent},
+  { path: 'service-cocktails-json', component: CocktailJsonComponent },
+  { path: 'API-Nasa', component:NasaComponent},
 ];
 
 export { ROUTES };
