@@ -11,9 +11,12 @@ export class KittenAsideComponent implements OnInit {
   @Input()
   public kittenAdopted?: Kitten[] = [];
   
-  constructor() { }
+  constructor() { 
+
+  }
 
   ngOnInit() {
+  
   }
 
 
