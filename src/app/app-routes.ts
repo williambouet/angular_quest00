@@ -17,6 +17,7 @@ import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 import { LoginFormComponent } from './loginForm/loginForm.component';
 import { CocktailJsonComponent } from './cocktail-json/cocktail-json.component';
 import { NasaComponent } from './nasa/nasa.component';
+import { KittenListComponent } from './kitten-list/kitten-list.component';
 
 const ROUTES: Routes = [
   { path: 'fiche', component: CardComponent },
@@ -37,7 +38,8 @@ const ROUTES: Routes = [
   { path: 'service-cocktails', component: CocktailListComponent },
   { path: 'atelier-formulaire', component: LoginFormComponent },
   { path: 'service-cocktails-json', component: CocktailJsonComponent },
-  { path: 'API-Nasa', component:NasaComponent},
+  { path: 'API-Nasa', component: NasaComponent },
+  { path: 'adopte-un-chat', component: KittenListComponent},
 ];
 
 export { ROUTES };
