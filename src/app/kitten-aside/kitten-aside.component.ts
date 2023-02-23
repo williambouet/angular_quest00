@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { Kitten } from '../model/kitten';
 
 @Component({
   selector: 'app-kitten-aside',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KittenAsideComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  public kittenAdopted?: Kitten[] = [];
+  
+  constructor() { 
+
+  }
 
   ngOnInit() {
+  
   }
+
 
 }
