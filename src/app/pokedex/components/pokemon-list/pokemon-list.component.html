@@ -1,0 +1,6 @@
+
+  <div class="list-group">
+    <ul class="list-group list-group-horizontal" *ngFor="let pokemon of pokemons">
+      <a href="#" class="list-group-item list-group-item-action" (click)="pokemonClicked(pokemon)">{{ pokemon.name }}</a>
+    </ul>
+  </div>

@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Pokedex</h1>
+  <div class="row">
+    <div class="col-12 col-sm-2">
+      <aside id="pokemonList">
+        <app-pokemon-list [pokemons]="pokemons" (pokemonTarget)="receivePokemonTarget($event)"></app-pokemon-list>
+      </aside>
+    </div>
+    <div class="col-12 col-sm-10">
+      <app-pokemon-details [pokemon]="pokemonTarget"></app-pokemon-details>
+    </div>
+  </div>
+</div>

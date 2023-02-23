@@ -19,6 +19,8 @@ import { CocktailJsonComponent } from './cocktail-json/cocktail-json.component';
 import { NasaComponent } from './nasa/nasa.component';
 import { KittenListComponent } from './kitten-list/kitten-list.component';
 import { AtelierButtonParentComponent } from './atelier-button-parent/atelier-button-parent.component';
+import { PokedexPageComponent } from './pokedex/pages/pokedex-page/pokedex-page.component';
+import { CreatePokemonComponent } from './pokedex/pages/create-pokemon/create-pokemon.component';
 
 const ROUTES: Routes = [
   { path: 'fiche', component: CardComponent },
@@ -41,7 +43,10 @@ const ROUTES: Routes = [
   { path: 'service-cocktails-json', component: CocktailJsonComponent },
   { path: 'API-Nasa', component:  NasaComponent },
   { path: 'adopte-un-chat', component: KittenListComponent },
-  { path: 'atelier-input', component: AtelierButtonParentComponent},
+  { path: 'atelier-input', component: AtelierButtonParentComponent },
+  { path: 'pokedex', component: PokedexPageComponent },
+  { path: 'ajouter-un-pokemon', component: CreatePokemonComponent}
+  
 ];
 
 export { ROUTES };
