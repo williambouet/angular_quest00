@@ -48,6 +48,9 @@ import { PokedexPageComponent } from './pokedex/pages/pokedex-page/pokedex-page.
 import { CreatePokemonComponent } from './pokedex/pages/create-pokemon/create-pokemon.component';
 import { PokemonDetailsComponent } from './pokedex/components/pokemon-details/pokemon-details.component';
 import { PokemonListComponent } from './pokedex/components/pokemon-list/pokemon-list.component';
+import { Pokemon } from './pokedex/shared/pokemon';
+import { PokedexService } from './pokedex/shared/pokedex.service';
+import { PokemonSearchComponent } from './pokedex/components/pokemon-search/pokemon-search.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +92,10 @@ import { PokemonListComponent } from './pokedex/components/pokemon-list/pokemon-
     PokedexPageComponent,
     CreatePokemonComponent,
     PokemonDetailsComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    PokemonSearchComponent
+    
+
   ],
   imports: [
     BrowserModule,
@@ -99,7 +105,7 @@ import { PokemonListComponent } from './pokedex/components/pokemon-list/pokemon-
     RouterModule.forRoot(ROUTES),
     HttpClientModule,
   ],
-  providers: [],
+  providers: [PokedexService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

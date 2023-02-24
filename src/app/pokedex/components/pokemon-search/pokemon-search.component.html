@@ -1,0 +1,9 @@
+<form class="d-flex " (ngSubmit)="modelForm.valid && onSubmit()" [formGroup]="modelForm" #searchForm="ngForm">
+  <input class="form-control me-2" type="text" placeholder="Rechercher" required maxlength="50" 
+  name="search" formControlName="search" >
+  <!-- <ng-container *ngIf="modelForm.controls.search.errors && searchForm.submitted">
+    <span class="m-1 p-0"><small class="fs-small text-danger"
+        *ngIf="modelForm.controls.search.errors?.['required']">Le pokemon est requis</small></span>
+  </ng-container> -->
+  <button class="btn btn-outline-secondary" type="submit" >Rechercher</button>
+</form>

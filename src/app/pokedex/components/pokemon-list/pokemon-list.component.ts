@@ -7,6 +7,7 @@ import { Pokemon } from '../../shared/pokemon';
   styleUrls: ['./pokemon-list.component.css']
 })
 export class PokemonListComponent implements OnInit {
+  public pokemon?: Pokemon;
 
   @Input()
   public pokemons?: Pokemon[];
@@ -14,7 +15,9 @@ export class PokemonListComponent implements OnInit {
   @Output()
   public pokemonTarget: EventEmitter<Pokemon> = new EventEmitter();
   
-  constructor(public pokemon?: Pokemon,) { }
+  constructor() { 
+    this.pokemon = new Pokemon();
+  }
 
   ngOnInit() {
   }
@@ -25,6 +28,9 @@ export class PokemonListComponent implements OnInit {
 
   pokemonClicked(pokemonClicked: Pokemon) {
     this.pokemon = pokemonClicked;
+    this.sendPokemonTarget();
   }
+
+  
 
 }

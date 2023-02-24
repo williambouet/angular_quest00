@@ -11,7 +11,11 @@ export class PokedexService {
 constructor(public http: HttpClient) { }
 
   getPokemonsList(): Observable<Pokemon[]>{
-    return this.http.get<Pokemon[]>("https://pokebuildapi.fr/api/v1/pokemon/limit/100");
+    return this.http.get<Pokemon[]>("https://pokebuildapi.fr/api/v1/pokemon");
+  }
+
+  getOnePokemon(pokemonName: string): Observable<Pokemon>{
+    return this.http.get<Pokemon>("https://pokebuildapi.fr/api/v1/pokemon/" + pokemonName);
   }
   
 }
