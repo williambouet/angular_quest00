@@ -52,9 +52,11 @@ import { Pokemon } from './pokedex/shared/pokemon';
 import { PokedexService } from './pokedex/shared/pokedex.service';
 import { PokemonSearchComponent } from './pokedex/components/pokemon-search/pokemon-search.component';
 import { AtelierPokemonListComponent } from './atelier-pokemon-list/atelier-pokemon-list.component';
+import { LevensteinTestComponent } from './levenstein-test/levenstein-test.component';
+import { LevensteinListComponent } from './levenstein-list/levenstein-list.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [			
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -95,7 +97,9 @@ import { AtelierPokemonListComponent } from './atelier-pokemon-list/atelier-poke
     PokemonDetailsComponent,
     PokemonListComponent,
     PokemonSearchComponent,
-      AtelierPokemonListComponent
+      AtelierPokemonListComponent,
+      LevensteinTestComponent,
+      LevensteinListComponent
    ],
   imports: [
     BrowserModule,
