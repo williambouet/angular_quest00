@@ -44,9 +44,16 @@ import { LoginFormComponent } from './loginForm/loginForm.component';
 import { NasaComponent } from './nasa/nasa.component';
 import { AtelierButtonComponent } from './atelier-button/atelier-button.component';
 import { AtelierButtonParentComponent } from './atelier-button-parent/atelier-button-parent.component';
+import { PokedexPageComponent } from './pokedex/pages/pokedex-page/pokedex-page.component';
+import { CreatePokemonComponent } from './pokedex/pages/create-pokemon/create-pokemon.component';
+import { PokemonDetailsComponent } from './pokedex/components/pokemon-details/pokemon-details.component';
+import { PokemonListComponent } from './pokedex/components/pokemon-list/pokemon-list.component';
+import { Pokemon } from './pokedex/shared/pokemon';
+import { PokedexService } from './pokedex/shared/pokedex.service';
+import { PokemonSearchComponent } from './pokedex/components/pokemon-search/pokemon-search.component';
 
 @NgModule({
-  declarations: [								
+  declarations: [
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -73,25 +80,32 @@ import { AtelierButtonParentComponent } from './atelier-button-parent/atelier-bu
     OnomatopeFormComponent,
     OnomatopeListComponent,
     CreateOnomatopeComponent,
-      KittenFormComponent,
-      KittenAsideComponent,
-      KittenListComponent,
-      CocktailListComponent,
-      LoginFormComponent,
+    KittenFormComponent,
+    KittenAsideComponent,
+    KittenListComponent,
+    CocktailListComponent,
+    LoginFormComponent,
     CocktailJsonComponent,
-      NasaComponent,
-      AtelierButtonComponent,
-      AtelierButtonParentComponent
-   ],
+    NasaComponent,
+    AtelierButtonComponent,
+    AtelierButtonParentComponent,
+    PokedexPageComponent,
+    CreatePokemonComponent,
+    PokemonDetailsComponent,
+    PokemonListComponent,
+    PokemonSearchComponent
+    
+
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(ROUTES),
-    HttpClientModule, 
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [PokedexService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

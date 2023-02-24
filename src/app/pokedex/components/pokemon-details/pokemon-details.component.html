@@ -1,0 +1,15 @@
+<div class="card" style="width: 50%;">
+  <img src="{{ pokemon?.image ? pokemon?.image : 'https://cdn.pixabay.com/photo/2016/07/23/13/21/pokemon-1536855__340.png'}}" class="card-img-top" alt="Un pokemon">
+  <div class="card-body">
+    <h5 class="card-title">{{pokemon?.name}}</h5>
+    <!-- <p class="card-text">{{pokemon?.sprite}}</p> -->
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Point de vie : {{pokemon?.stats?.HP}}</li>
+    <li class="list-group-item">Attaque : {{pokemon?.stats?.attack}}</li>
+    <li class="list-group-item">Défense : {{pokemon?.stats?.defense}}</li>
+    <li class="list-group-item">Vitesse : {{pokemon?.stats?.speed}}</li>
+    <li class="list-group-item">Spéciale attaque : {{pokemon?.stats?.special_attack}}</li>
+    <li class="list-group-item">Spéciale défense : {{pokemon?.stats?.specail_defense}}</li>
+  </ul>
+</div>
