@@ -21,6 +21,7 @@ import { KittenListComponent } from './kitten-list/kitten-list.component';
 import { AtelierButtonParentComponent } from './atelier-button-parent/atelier-button-parent.component';
 import { PokedexPageComponent } from './pokedex/pages/pokedex-page/pokedex-page.component';
 import { CreatePokemonComponent } from './pokedex/pages/create-pokemon/create-pokemon.component';
+import { AtelierPokemonListComponent } from './atelier-pokemon-list/atelier-pokemon-list.component';
 
 const ROUTES: Routes = [
   { path: 'fiche', component: CardComponent },
@@ -45,7 +46,8 @@ const ROUTES: Routes = [
   { path: 'adopte-un-chat', component: KittenListComponent },
   { path: 'atelier-input', component: AtelierButtonParentComponent },
   { path: 'pokedex', component: PokedexPageComponent },
-  { path: 'ajouter-un-pokemon', component: CreatePokemonComponent}
+  { path: 'ajouter-un-pokemon', component: CreatePokemonComponent },
+  { path: 'pokeCard', component: AtelierPokemonListComponent},
   
 ];
 
