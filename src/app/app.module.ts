@@ -51,9 +51,10 @@ import { PokemonListComponent } from './pokedex/components/pokemon-list/pokemon-
 import { Pokemon } from './pokedex/shared/pokemon';
 import { PokedexService } from './pokedex/shared/pokedex.service';
 import { PokemonSearchComponent } from './pokedex/components/pokemon-search/pokemon-search.component';
+import { AtelierPokemonListComponent } from './atelier-pokemon-list/atelier-pokemon-list.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -93,10 +94,9 @@ import { PokemonSearchComponent } from './pokedex/components/pokemon-search/poke
     CreatePokemonComponent,
     PokemonDetailsComponent,
     PokemonListComponent,
-    PokemonSearchComponent
-    
-
-  ],
+    PokemonSearchComponent,
+      AtelierPokemonListComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
