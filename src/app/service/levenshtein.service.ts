@@ -4,7 +4,7 @@ import { TEST_LIST } from './mock-pokemon';
 @Injectable({
   providedIn: 'root',
 })
-export class LevensteinService {
+export class LevenshteinService {
   private substitution?: number;
   private insertion?: number;
   private deletion?: number;

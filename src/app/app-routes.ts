@@ -22,7 +22,7 @@ import { AtelierButtonParentComponent } from './atelier-button-parent/atelier-bu
 import { PokedexPageComponent } from './pokedex/pages/pokedex-page/pokedex-page.component';
 import { CreatePokemonComponent } from './pokedex/pages/create-pokemon/create-pokemon.component';
 import { AtelierPokemonListComponent } from './atelier-pokemon-list/atelier-pokemon-list.component';
-import { LevensteinTestComponent } from './levenstein-test/levenstein-test.component';
+import { LevenshteinTestComponent } from './levenshtein-test/levenshtein-test.component';
 
 const ROUTES: Routes = [
   { path: 'fiche', component: CardComponent },
@@ -43,14 +43,13 @@ const ROUTES: Routes = [
   { path: 'service-cocktails', component: CocktailListComponent },
   { path: 'atelier-formulaire', component: LoginFormComponent },
   { path: 'service-cocktails-json', component: CocktailJsonComponent },
-  { path: 'API-Nasa', component:  NasaComponent },
+  { path: 'API-Nasa', component: NasaComponent },
   { path: 'adopte-un-chat', component: KittenListComponent },
   { path: 'atelier-input', component: AtelierButtonParentComponent },
   { path: 'pokedex', component: PokedexPageComponent },
   { path: 'ajouter-un-pokemon', component: CreatePokemonComponent },
   { path: 'pokeCard', component: AtelierPokemonListComponent },
-  {path: 'levenstein', component:LevensteinTestComponent},
-  
+  { path: 'levenshtein', component: LevenshteinTestComponent },
 ];
 
 export { ROUTES };

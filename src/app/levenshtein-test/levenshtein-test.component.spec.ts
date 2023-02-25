@@ -3,21 +3,20 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { LevensteinTestComponent } from './levenstein-test.component';
+import { LevenshteinTestComponent } from './levenshtein-test.component';
 
-describe('LevensteinTestComponent', () => {
-  let component: LevensteinTestComponent;
-  let fixture: ComponentFixture<LevensteinTestComponent>;
+describe('LevenshteinTestComponent', () => {
+  let component: LevenshteinTestComponent;
+  let fixture: ComponentFixture<LevenshteinTestComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LevensteinTestComponent ]
-    })
-    .compileComponents();
+      declarations: [LevenshteinTestComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LevensteinTestComponent);
+    fixture = TestBed.createComponent(LevenshteinTestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
