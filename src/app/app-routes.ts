@@ -23,6 +23,7 @@ import { PokedexPageComponent } from './pokedex/pages/pokedex-page/pokedex-page.
 import { CreatePokemonComponent } from './pokedex/pages/create-pokemon/create-pokemon.component';
 import { AtelierPokemonListComponent } from './atelier-pokemon-list/atelier-pokemon-list.component';
 import { LevenshteinTestComponent } from './levenshtein-test/levenshtein-test.component';
+import { UserComponent } from './user/user.component';
 
 const ROUTES: Routes = [
   { path: 'fiche', component: CardComponent },
@@ -50,6 +51,7 @@ const ROUTES: Routes = [
   { path: 'ajouter-un-pokemon', component: CreatePokemonComponent },
   { path: 'pokeCard', component: AtelierPokemonListComponent },
   { path: 'levenshtein', component: LevenshteinTestComponent },
+  { path: 'MAJ-forms', component: UserComponent },
 ];
 
 export { ROUTES };
