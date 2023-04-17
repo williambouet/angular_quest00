@@ -1,7 +1,23 @@
 <form class="d-flex flex-column" [formGroup]="credentials" (ngSubmit)="onSubmit()">
-  <label>Username:<input type="text" formControlName="username"></label>
-  <label>email:<input type="text" formControlName="email"></label>
-  <label>password:<input type="text" formControlName="password"></label>
+  <label>Username:<input type="text" formControlName="username">
+    <div *ngIf="credentials.controls['username'].errors && !credentials.controls['username'].pristine" class="error-msg">
+      <div [hidden]="!credentials.controls['username'].errors['required']">username is required.</div>
+      <div [hidden]="!credentials.controls['username'].invalid">username is invalid.</div>
+  </div>
+</label>
+  <label>email:<input type="email" formControlName="email">
+    {{ credentials.get('credentials.email')?.errors?.['rules'] }}
+    <div *ngIf="credentials.controls['email'].errors && !credentials.controls['email'].pristine" class="error-msg">
+        <div [hidden]="!credentials.controls['email'].errors['required']">email is required.</div>
+        <div [hidden]="!credentials.controls['email'].invalid">email is invalid.</div>
+    </div>
+  </label>
+  <label>password:<input type="password" formControlName="password">
+    {{ credentials.get('credentials.password')?.errors?.['rules'] }}
+    <div *ngIf="credentials.get('credentials.password')?.errors && !credentials.get('credentials.password')?.pristine" class="error-msg">
+        <div [hidden]="!credentials.get('credentials.password')?.errors?.['required']">password is required.</div>
+        <div [hidden]="!credentials.get('credentials.password')?.invalid">password is invalid.</div>
+    </div></label>
   <div formGroupName="address">
     <label>street:<input type="text" formControlName="street"></label>
   <label>zipcode:<input type="text" formControlName="zipcode"></label>
