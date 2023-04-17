@@ -1,11 +1,13 @@
-<form class="d-flex flex-column" >
-  <label>Username:<input type="text" [formControl]="username"></label>
-  <label>email:<input type="text" [formControl]="email"></label>
-  <label>password:<input type="text" [formControl]="password"></label>
-  <label>street:<input type="text" [formControl]="street"></label>
-  <label>zipcode:<input type="text" [formControl]="zipcode"></label>
-  <label>city:<input type="text" [formControl]="city"></label>
-  <button type="button" (click)="createUser()">Inscription</button>
+<form class="d-flex flex-column" [formGroup]="credentials" (ngSubmit)="onSubmit()">
+  <label>Username:<input type="text" formControlName="username"></label>
+  <label>email:<input type="text" formControlName="email"></label>
+  <label>password:<input type="text" formControlName="password"></label>
+  <div formGroupName="address">
+    <label>street:<input type="text" formControlName="street"></label>
+  <label>zipcode:<input type="text" formControlName="zipcode"></label>
+  <label>city:<input type="text" formControlName="city"></label>
+</div>
+  <button type="submit" [disabled]="!credentials.valid ">Inscription</button>
 </form>
 <div>
   <p>{{ user.username }}</p>

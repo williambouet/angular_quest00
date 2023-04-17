@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { UserReactive } from '../model/user-reactive';
 
 @Component({
@@ -9,24 +9,28 @@ import { UserReactive } from '../model/user-reactive';
 })
 export class UserComponent {
   user: UserReactive;
-  username = new FormControl('le nom');
-  email = new FormControl('l\'email');
-  password = new FormControl('le password');
-  street = new FormControl('la rue');
-  zipcode = new FormControl('le code postal');
-  city = new FormControl('la ville');
-
-  constructor() { 
-    this.user = new UserReactive('', '', '', '', '', '');
-   }
+  credentials = this.fb.group({
+    username : [''],
+    email : [''],
+    password : [''],
+    address: this.fb.group({
+      street: [''],
+      zipcode: [''],
+      city: ['']
+    })
+})
   
-  createUser() {
-    this.user.username = (this.username.value ?? 'x');
-    this.user.email = (this.email.value ?? '');
-    this.user.password = (this.password.value ?? '');
-    this.user.street = (this.street.value ?? '');
-    this.user.zipcode = (this.zipcode.value ?? '');
-    this.user.city = (this.city.value ?? '');
+  constructor(private fb: FormBuilder) { 
+    this.user = new UserReactive('', '', '', '', '', '');
+  }
+  
+  onSubmit() {
+    this.user.username = (this.credentials.value['username'] ?? '');
+    this.user.email = (this.credentials.value['email'] ?? '');
+    this.user.password = (this.credentials.value['password'] ?? '');
+    this.user.street = (this.credentials.get('address.street')?.value ?? '');
+    this.user.zipcode = (this.credentials.get('address.zipcode')?.value  ?? '');
+    this.user.city = (this.credentials.get('address.city')?.value  ?? '');
 }
 
 }
