@@ -53,10 +53,13 @@ import { PokedexService } from './pokedex/shared/pokedex.service';
 import { PokemonSearchComponent } from './pokedex/components/pokemon-search/pokemon-search.component';
 import { AtelierPokemonListComponent } from './atelier-pokemon-list/atelier-pokemon-list.component';
 import { LevenshteinTestComponent } from './levenshtein-test/levenshtein-test.component';
+import { SortByPipe } from './pipe/sort-by.pipe';
+import { UserComponent } from './user/user.component';
+
 
 
 @NgModule({
-  declarations: [		
+  declarations: [				
     AppComponent,
     SquareComponent,
     CalculatriceComponent,
@@ -99,7 +102,8 @@ import { LevenshteinTestComponent } from './levenshtein-test/levenshtein-test.co
     PokemonSearchComponent,
     AtelierPokemonListComponent,
     LevenshteinTestComponent,
-
+    SortByPipe,
+      UserComponent
    ],
   imports: [
     BrowserModule,

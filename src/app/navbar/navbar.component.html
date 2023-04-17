@@ -1,69 +1,90 @@
 <nav class="navbar navbar-expand-lg bg-secondary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">ANGULAR</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link text-light" [routerLink]="['/pokeCard']">PokeCard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" [routerLink]="['/pokedex']">Pokedex</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" [routerLink]="['/levenshtein']">Distance de Levenshtein</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Menu des quêtes
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="text-secondary text-decoration-none"
-                [routerLink]="['/calculatrice']"><small>Calculatrice</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/fiche']"><small>Fiche
-                  identité</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/ingrédient']"><small>Liste
-                  raclette</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/films']"><small>Films</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/carré']"><small>Les carrés</small></a>
-            </li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/boutons']"><small>Clic sur le
-                  bouton</small></a></li>
-            <li><a class="text-secondary text-decoration-none"
-                [routerLink]="['/catalogue']"><small>Catalogue</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/héros']"><small>Hero Corp</small></a>
-            </li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/inscription']"><small>Formulaire
-                  d'inscription</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/formulaire-réactif']"><small>Formulaire
-                  réactif</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/recherche-film']"><small>Formulaire de
-                  film</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/parent']"><small>@input
-                  "enfant-parent"</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/développeur']"><small>@Input
-                  Développeur</small></a></li>
-            <li><a class="text-secondary text-decoration-none"
-                [routerLink]="['/onomatope']"><small>Onomatope</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/service-cocktails']"><small>Service
-                  cocktails</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/service-cocktails-json']"><small>Service
-                  cocktails json</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/atelier-formulaire']"><small>Atelier
-                  formulaire</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/API-Nasa']"><small>Api Nasa</small></a>
-            </li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/adopte-un-chat']"><small>Adopte un
-                  chat</small></a></li>
-            <li><a class="text-secondary text-decoration-none" [routerLink]="['/atelier-input']"><small>Atelier
-                  @Input</small></a></li>
-          </ul>
-        </li>
-      </ul>
+      <div class="container-fluid">
+            <a class="navbar-brand" href="#">ANGULAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                              <a class="nav-link text-light" [routerLink]="['/pokeCard']">PokeCard</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link text-light" [routerLink]="['/pokedex']">Pokedex</a>
+                        </li>
+                        <li class="nav-item">
+                              <a class="nav-link text-light" [routerLink]="['/levenshtein']">Distance de Levenshtein</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Menu des quêtes
+                              </a>
+                              <ul class="dropdown-menu">
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/calculatrice']"><small>Calculatrice</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/fiche']"><small>Fiche
+                                                      identité</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/ingrédient']"><small>Liste
+                                                      raclette</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/films']"><small>Films</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/carré']"><small>Les carrés</small></a>
+                                    </li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/boutons']"><small>Clic sur le
+                                                      bouton</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/catalogue']"><small>Catalogue</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/héros']"><small>Hero Corp</small></a>
+                                    </li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/inscription']"><small>Formulaire
+                                                      d'inscription</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/formulaire-réactif']"><small>Formulaire
+                                                      réactif</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/recherche-film']"><small>Formulaire de
+                                                      film</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/parent']"><small>@input
+                                                      "enfant-parent"</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/développeur']"><small>@Input
+                                                      Développeur</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/onomatope']"><small>Onomatope</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/service-cocktails']"><small>Service
+                                                      cocktails</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/service-cocktails-json']"><small>Service
+                                                      cocktails json</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/atelier-formulaire']"><small>Atelier
+                                                      formulaire</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/API-Nasa']"><small>Api Nasa</small></a>
+                                    </li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/adopte-un-chat']"><small>Adopte un
+                                                      chat</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/atelier-input']"><small>Atelier
+                                                      @Input</small></a></li>
+                                    <li><a class="text-secondary text-decoration-none"
+                                                [routerLink]="['/MAJ-forms']"><small>MAJ formulaire</small></a></li>
+                              </ul>
+                        </li>
+                  </ul>
 
-    </div>
-  </div>
+            </div>
+      </div>
 </nav>
